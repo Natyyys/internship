@@ -8,6 +8,7 @@
     "test": "backstop test --config=pp.config.cjs",
     "build": "vite build",
     "preview": "vite preview --open",
+    "deploy": "gh-pages -d dist",
     "convert-rastr": "node convert-rastr.js",
     "w3c": "html-validator source --quiet",
     "linthtml": "linthtml source",
@@ -42,7 +43,9 @@
     "vite-plugin-minify": "^1.5.2",
     "w3c-html-validator": "1.6.1"
   },
+  "homepage": "https://natyyys.github.io/internship",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "swiper": "11.0.5"
   }
 }
