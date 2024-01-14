@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite --host --open",
     "test": "backstop test --config=pp.config.cjs",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview --open",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "vite build --base=./ && gh-pages -d dist",
     "convert-rastr": "node convert-rastr.js",
     "w3c": "html-validator source --quiet",
     "linthtml": "linthtml source",

@@ -1,0 +1,43 @@
+.header {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 30px;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.header.is-opened {
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    background-color: $color-black-pearl-40;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    top: -30px;
+  }
+
+  .header__menu {
+    z-index: 3;
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__menu {
+  justify-self: end;
+}
+
+.header__nav {
+  position: absolute;
+  top: 58px;
+  right: 100px;
+}

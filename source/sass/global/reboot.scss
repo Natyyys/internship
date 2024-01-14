@@ -32,6 +32,10 @@ body {
   min-width: $vp-320;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   display: block;
   max-width: 100%;

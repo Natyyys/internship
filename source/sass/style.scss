@@ -1,6 +1,7 @@
 // Vendor
 
 @import "vendor/normalize";
+@import "vendor/data-accordion";
 
 // Global
 
@@ -12,3 +13,8 @@
 @import "global/container";
 
 // Blocks
+@import "blocks/header";
+@import "blocks/toggle";
+@import "blocks/nav";
+@import 'swiper/css/bundle';
+@import "blocks/hero";
