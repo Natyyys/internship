@@ -1,9 +1,10 @@
 .button {
   min-width: 196px;
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  gap: 0 30px;
-  padding: 4px 4px 4px 30px;
+  gap: 0 31px;
+  padding: 3px 3px 3px 29px;
   align-items: center;
   background-color: $color-default-white;
   border: 1px solid $color-cerulean-blue;

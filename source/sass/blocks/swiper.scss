@@ -4,7 +4,6 @@
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
   gap: 0 12px;
-  // position: absolute;
 }
 
 .swiper-pagination-fraction,
@@ -21,7 +20,7 @@
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: $color-default-white;
+  background-color: transparent;
   border: 1px solid $color-cerulean-blue;
   opacity: 1;
 }

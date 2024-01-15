@@ -1,0 +1,65 @@
+.features {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  border-radius: 20px;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 52px 106px 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 32px;
+  }
+
+  li {
+    padding: 25px 59px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    border: 1px solid $color-alabaster;
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    min-height: 132px;
+
+    &:first-child {
+      gap: 36px;
+    }
+
+    &:nth-child(3n+3) {
+      padding: 25px 53px;
+    }
+
+    &:last-child {
+      gap: 15px;
+    }
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.26px;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 171px;
+    width: fit-content;
+    padding-top: 4px;
+  }
+
+  p {
+    line-height: 20px;
+    font-weight: 300;
+    margin: 0;
+    max-width: 190px;
+    min-width: 142px;
+  }
+
+  svg {
+    position: absolute;
+    top: -23px;
+    left: -21px;
+  }
+}

@@ -1,0 +1,47 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 60px 0;
+  padding-top: 118px;
+}
+
+.about__text-container {
+  display: grid;
+  grid-template-columns: 477px 498px;
+  justify-content: space-between;
+  width: 1134px;
+}
+
+.about__title {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  h2 {
+    padding-top: 5px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0;
+  }
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.about__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
