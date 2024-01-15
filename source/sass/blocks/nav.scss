@@ -92,13 +92,14 @@
       position: absolute;
       top: 5px;
       right: 0;
+      transition: transform $trans-default;
     }
   }
 }
 
-.nav__icon {
-  transition: transform $trans-default;
-}
+// .nav__icon {
+//   transition: transform $trans-default;
+// }
 
 .nav__item.is-active {
   color: $color-default-white;
@@ -108,7 +109,7 @@
   }
 }
 
-.nav__item.is-active .nav__icon {
+.nav__item.is-active svg {
   transform: scale(-1);
 }
 
