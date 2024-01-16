@@ -28,3 +28,34 @@
 .swiper .swiper-pagination-bullet-active {
   background-color: $color-cerulean-blue;
 }
+
+.swiper__text {
+  h2 {
+    font-size: 24px;
+    color: $color-cerulean-blue;
+
+    @include vp-1439 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+
+    @include vp-1439 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
