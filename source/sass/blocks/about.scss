@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   gap: 60px 0;
   padding-top: 118px;
+
+  @include vp-1439 {
+    padding-top: 99px;
+  }
 }
 
 .about__text-container {
@@ -11,6 +15,16 @@
   grid-template-columns: 477px 498px;
   justify-content: space-between;
   width: 1134px;
+
+
+  @include vp-1439 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 29px;
+    padding-right: 180px;
+  }
 }
 
 .about__title {
@@ -18,14 +32,27 @@
   flex-direction: column;
   gap: 35px;
 
+  @include vp-1439 {
+    gap: 25px;
+  }
+
   h2 {
     padding-top: 5px;
+
+    @include vp-1439 {
+      padding-top: 0;
+    }
   }
 
   p {
     font-size: 22px;
     line-height: 32px;
     margin: 0;
+
+    @include vp-1439 {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 }
 
@@ -34,8 +61,17 @@
   flex-direction: column;
   gap: 33px;
 
+  @include vp-1439 {
+    gap: 23px;
+  }
+
   p {
     margin: 0;
+
+    @include vp-1439 {
+      line-height: 20px;
+      margin-bottom: 13px;
+    }
   }
 }
 

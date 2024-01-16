@@ -10,6 +10,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 34px 32px;
+
+    @include vp-1439 {
+      padding: 42px 40px 40px;
+      gap: 22px 30px;
+    }
   }
 
   li {
@@ -24,16 +29,55 @@
     position: relative;
     min-height: 132px;
 
+    @include vp-1439 {
+      flex-direction: column;
+      padding: 26px 29px 25px;
+      min-height: auto;
+      gap: 7px;
+    }
+
     &:first-child {
       gap: 36px;
+
+      @include vp-1439 {
+        gap: 7px;
+      }
+    }
+
+    &:first-child + li {
+      @include vp-1439 {
+        br {
+          display: none;
+        }
+      }
     }
 
     &:nth-child(3n+3) {
       padding: 25px 53px;
+
+      @include vp-1439 {
+        padding: 26px 29px 25px;
+      }
+    }
+
+    &:nth-child(even) {
+      @include vp-1439 {
+        padding-right: 5px;
+      }
     }
 
     &:last-child {
       gap: 15px;
+
+      @include vp-1439 {
+        gap: 7px;
+      }
+
+      @include vp-900 {
+        br {
+          display: none;
+        }
+      }
     }
   }
 
@@ -47,6 +91,14 @@
     max-width: 171px;
     width: fit-content;
     padding-top: 4px;
+
+    @include vp-1439 {
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.2px;
+      max-width: none;
+      padding-right: 85px;
+    }
   }
 
   p {
@@ -55,6 +107,11 @@
     margin: 0;
     max-width: 190px;
     min-width: 142px;
+
+    @include vp-1439 {
+      max-width: none;
+      padding-right: 10px;
+    }
   }
 
   svg {

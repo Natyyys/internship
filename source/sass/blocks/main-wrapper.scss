@@ -11,6 +11,11 @@
     font-weight: 400;
     color: $color-cerulean-blue;
     margin: 0;
+
+    @include vp-1439 {
+      font-size: 34px;
+      line-height: 50px;
+    }
   }
 
   h3 {
@@ -19,5 +24,10 @@
     font-weight: 400;
     color: $color-cerulean-blue;
     margin: 0;
+
+    @include vp-1439 {
+      font-size: 28px;
+      line-height: 1;
+    }
   }
 }
