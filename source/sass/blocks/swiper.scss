@@ -30,9 +30,11 @@
 }
 
 .swiper__text {
-  h2 {
+  h3 {
     font-size: 24px;
+    line-height: 26px;
     color: $color-cerulean-blue;
+    background-color: $color-default-white;
 
     @include vp-1439 {
       font-size: 20px;
@@ -48,6 +50,7 @@
   p {
     font-size: 14px;
     line-height: 18px;
+    margin: 0;
 
     @include vp-1439 {
       line-height: 20px;
@@ -58,4 +61,16 @@
       line-height: 14px;
     }
   }
+}
+
+.swiper-horizontal >
+.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.swiper-scrollbar-drag {
+  width: 392px;
 }

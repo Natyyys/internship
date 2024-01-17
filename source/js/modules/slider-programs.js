@@ -33,6 +33,8 @@ const initProgramsSlider = () => {
     },
     scrollbar: {
       el: scrollbar,
+      draggable: true,
+      dragSize: 392,
     }
   });
 

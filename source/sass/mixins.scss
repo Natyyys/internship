@@ -4,12 +4,6 @@
   }
 }
 
-@mixin vp-900 {
-  @media (min-width: ($vp-900)) {
-    @content;
-  }
-}
-
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
     @content;
