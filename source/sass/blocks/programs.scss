@@ -28,15 +28,15 @@
     position: relative;
     width: 392px;
   }
+}
 
+.prosrams__image-wrapper {
   img {
     border-radius: 12px;
     background-color: $color-charcoal;
     object-fit: cover;
   }
-}
 
-.prosrams__image-wrapper {
   &::before {
     content: "";
     position: absolute;
@@ -56,10 +56,18 @@
 
 .programs__text-title {
   width: 194px;
+  position: relative;
 
   h3 {
     padding: 13px 18px 2px 18px;
     border-radius: 12px 12px 0px 0px;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: -18px;
+    transform: rotate(-90deg);
   }
 }
 
