@@ -1,16 +1,9 @@
-.swiper-pagination {
-  display: flex;
-  padding: 14px 20px;
-  background-color: $color-default-white;
-  border-radius: 20px 20px 0 0;
-  gap: 0 12px;
-}
-
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   width: min-content;
+  bottom: 0;
 }
 
 .swiper-slide-active .hero__content {
