@@ -1,6 +1,4 @@
 .hero {
-  margin-top: -114px;
-
   ul {
     margin: 0;
     padding: 0;
@@ -33,7 +31,11 @@
 
   @include vp-1439 {
     min-height: 1024px;
-    // padding-bottom: 83px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding-bottom: 20px;
   }
 
   h2 {
@@ -53,17 +55,13 @@
       padding: 31px 40px 23px;
       max-width: 659px;
     }
-  }
 
-  p {
-    margin: 0;
-    margin-top: -7px;
-
-    @include vp-1439 {
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: -4px;
-      padding-right: 20px;
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 26px;
+      padding: 20px 14px 16px;
+      max-width: 100%;
+      border-radius: 0px 16px 16px 0px;
     }
   }
 }
@@ -71,13 +69,18 @@
 .hero__pagination-wrapper {
   position: relative;
   width: fit-content;
-  min-width: 94px;
 
   img {
     position: absolute;
     transform: rotate(-90deg);
     bottom: 0;
     right: -20px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+    }
   }
 }
 
@@ -88,10 +91,15 @@
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
   gap: 0 4px;
-  min-height: 38px;
+  height: fit-content;
+
+  @include vp-767 {
+    padding: 10px 12px;
+    border-radius: 12px 12px 0px 0px;
+  }
 }
 
-.hero__text {
+.hero__container {
   display: flex;
   flex-direction: row;
   gap: 0 30px;
@@ -106,18 +114,80 @@
     max-width: 591px;
   }
 
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-top: -5px;
+  }
+
+  p {
+    margin: 0;
+    margin-top: -7px;
+
+    @include vp-1439 {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: -4px;
+      padding-right: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      padding: 0 14px 10px;
+      border-radius: 0px 0px 14px 0px;
+      width: 92%;
+      background-color: $color-default-white;
+      margin-top: 0;
+    }
+  }
+}
+
+.hero__text {
   img {
-    height: 26px;
     position: absolute;
-    right: -26px;
     top: 0;
+    right: -26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      right: calc(8% - 10px);
+      top: 5px;
+    }
   }
 }
 
 .hero__button-wrapper {
   padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   @include vp-1439 {
     padding-top: 0;
+  }
+
+  @include vp-767 {
+    position: relative;
+    padding: 10px 15px;
+    max-width: 182px;
+    border-radius: 0px 0px 14px 14px;
+    background-color: $color-default-white;
+  }
+
+  img {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: -10px;
+      top: 0;
+    }
   }
 }

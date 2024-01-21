@@ -116,6 +116,10 @@
 
       @include vp-767 {
         gap: 4px;
+
+        br {
+          display: none;
+        }
       }
     }
   }
