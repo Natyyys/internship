@@ -1,21 +1,50 @@
 .programs {
   width: 100%;
 
+  // @include vp-767 {
+  //   position: relative;
+  // }
+}
+
+.programs .container {
+  @include vp-1439 {
+    padding: 0;
+    margin: 0;
+  }
+
   @include vp-767 {
+    padding-right: 15px;
+    padding-left: 15px;
     position: relative;
   }
 }
 
-.programs__title {
+.programs__heading-wrapper{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @include vp-1439 {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    padding-right: 15px;
+  }
 
   h2 {
     padding-top: 4px;
 
     @include vp-1439 {
       padding-top: 1px;
+    }
+
+    @include vp-767 {
+      position: absolute;
+      top: 0;
+      left: 15px;
     }
   }
 
@@ -48,10 +77,8 @@
   }
 
   @include vp-767 {
-    width: calc(290 / 320 * 100%);
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
-    position: relative;
   }
 
   ul {
@@ -68,14 +95,14 @@
     }
 
     @include vp-767 {
-      margin-top: 32px;
+      margin-top: 53px;
       margin-bottom: 72px;
     }
   }
 
   li {
     margin-right: 32px;
-    position: relative;
+    // position: relative;
     width: 392px;
 
     @include vp-1439 {
@@ -84,7 +111,7 @@
   }
 }
 
-.prosrams__image-wrapper {
+.programs__image-wrapper {
   img {
     width: 100%;
     height: 420px;
@@ -130,12 +157,20 @@
     width: 173px;
   }
 
+  @include vp-767 {
+    width: calc(157 / 290 * 100%);
+  }
+
   h3 {
     padding: 13px 18px 2px 18px;
     border-radius: 12px 12px 0px 0px;
 
     @include vp-1439 {
       padding: 13px 18px 1px 18px;
+    }
+
+    @include vp-767 {
+      padding: 18px 18px 6px 18px;
     }
   }
 
@@ -164,7 +199,13 @@
 
   @include vp-767 {
     min-height: 10px;
-    // padding: 7px 18px 10px;
+    padding: 13px 18px 14px;
+  }
+
+  a {
+    @include vp-767 {
+      margin-top: -2px;
+    }
   }
 }
 
@@ -174,6 +215,10 @@
   flex-direction: row;
   gap: 52px;
   align-items: center;
+
+  @include vp-1439 {
+    gap: 64px;
+  }
 }
 
 .programs__scrollbar {

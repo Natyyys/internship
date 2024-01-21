@@ -68,4 +68,9 @@
   position: relative;
   left: 0;
   top: 0;
+  width: calc(100% - 106px);
+
+  @include vp-1439 {
+    width: calc(100% - 118px);
+  }
 }
