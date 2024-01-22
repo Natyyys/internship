@@ -1,5 +1,6 @@
+// import Swiper from 'swiper/bundle';
 import Swiper from 'swiper';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 
 const programsSlider = document.querySelector('[data-programs-slider]');
 const buttonPrev = document.querySelector('[data-programs-prev]');
@@ -8,7 +9,7 @@ const scrollbar = document.querySelector('[data-programs-scrollbar]');
 
 const initProgramsSlider = () => {
   const swiper = new Swiper(programsSlider, {
-    modules: [Navigation, Pagination, Scrollbar],
+    modules: [Navigation, Scrollbar],
     speed: 1500,
     loop: false,
     navigation: {
@@ -21,7 +22,7 @@ const initProgramsSlider = () => {
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 15,
         allowTouchMove: true,
         scrollbar: {
@@ -30,11 +31,11 @@ const initProgramsSlider = () => {
         },
       },
       768: {
-        slidesPerView: 2.13,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         allowTouchMove: true,
         scrollbar: {
-          dragSize: 324,
+          dragSize: '324',
         },
       },
       1440: {
