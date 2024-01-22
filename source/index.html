@@ -207,7 +207,7 @@
 
     <main>
       <div class="main-wrapper">
-        <section class="about container" data-test="about">
+        <section class="about container" id="about" data-test="about">
           <div class="about__text-container">
             <div class="about__title">
               <h2>О проекте «Стажировка»</h2>
@@ -264,7 +264,7 @@
           </div>
         </section>
 
-        <section class="programs" data-test="programs">
+        <section class="programs" id="programs" data-test="programs">
           <div class="programs__container container">
             <div class="programs__heading-wrapper">
               <h2>Программы</h2>
@@ -463,7 +463,33 @@
           </div>
         </section>
 
-        <div data-test="grant">grant</div>
+        <section class="grant" data-test="grant" id="grant">
+          <div class="grant__container container">
+            <div class="grant__heading">
+              <h2>Как поехать</h2>
+              <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах<br> и городах, в которых можете пройти программу.</p>
+              <div class="grant__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" width="290" height="200" srcset="img/content/grant/grant-photo-mobile.webp 1x, img/content/grant/grant-photo-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" width="678" height="355" srcset="img/content/grant/grant-photo-tablet.webp 1x, img/content/grant/grant-photo-tablet@2x.webp 2x">
+                  <source type="image/webp" width="498" height="363" srcset="img/content/grant/grant-photo-desktop.webp 1x, img/content/grant/grant-photo-desktop@2x.webp 2x">
+                  <source type="image/png" media="(max-width: 767px)" width="290" height="200" srcset="img/content/grant/grant-photo-mobile.png 1x, img/content/grant/grant-photo-mobile@2x.png 2x">
+                  <source type="image/png" media="(max-width: 1439px)" width="678" height="355" srcset="img/content/grant/grant-photo-tablet.png 1x, img/content/grant/grant-photo-tablet@2x.png 2x">
+                  <img src="img/content/grant/grant-photo-desktop.jpg" srcset="img/content/grant/grant-photo-desktop@2.jpg 2x" width="498" height="363" alt="Дорожный указатель.">
+                </picture>
+              </div>
+            </div>
+            <div class="grant__conditions">
+              <h3>Чтобы получить грант на обучение, вам нужно:</h3>
+              <ol>
+                <li>Быть в возрасте от 16 до 30 лет</li>
+                <li>Иметь оконченное среднее образование</li>
+                <li>Иметь документально подтверждённое отсутствие судимости и пройти консульскую<br> проверку</li>
+                <li>За последние 2 года быть<br> не больше 3х месяцев подряд непрерывно в одной стране</li>
+              </ol>
+            </div>
+          </div>
+        </section>
         <div data-test="news">news</div>
         <div data-test="FAQ">FAQ</div>
         <div data-test="reviews">reviews</div>
