@@ -3,6 +3,7 @@ import {initAccordions} from './vendor/accordion/init-accordion';
 import {initHeroSlider} from './modules/slider-hero';
 import {onScrollHeader} from './modules/sticky-header';
 import {initProgramsSlider} from './modules/slider-programs';
+import {initNewsSlider} from './modules/slider-news';
 
 window.addEventListener('DOMContentLoaded', () => {
   onScrollHeader();
@@ -12,5 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initAccordions();
     initProgramsSlider();
+    initNewsSlider();
   });
 });

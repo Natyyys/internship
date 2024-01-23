@@ -1,4 +1,3 @@
-// import Swiper from 'swiper/bundle';
 import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 
