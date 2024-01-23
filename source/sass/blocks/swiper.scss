@@ -60,6 +60,15 @@
       line-height: 14px;
     }
   }
+
+  time {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+    background-color: $color-alabaster;
+  }
 }
 
 .swiper-horizontal >

@@ -76,6 +76,7 @@
     transform: rotate(-90deg);
     bottom: 0;
     right: -20px;
+    fill: $color-default-white;
 
     @include vp-767 {
       width: 10px;
