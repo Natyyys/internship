@@ -4,6 +4,7 @@ import {initHeroSlider} from './modules/slider-hero';
 import {onScrollHeader} from './modules/sticky-header';
 import {initProgramsSlider} from './modules/slider-programs';
 import {initNewsSlider} from './modules/slider-news';
+import {initNewsFilter} from './modules/tabs-news';
 
 window.addEventListener('DOMContentLoaded', () => {
   onScrollHeader();
@@ -14,5 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initProgramsSlider();
     initNewsSlider();
+    initNewsFilter();
   });
 });

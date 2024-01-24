@@ -494,16 +494,16 @@
         <section class="news" id="news" data-test="news">
           <div class="news__container">
             <h2>Новости и материалы</h2>
-            <div class="news__tabs">
-              <button class="news__tab is-active" type="button">Общее</button>
-              <button class="news__tab" type="button">Волонтёрство</button>
-              <button class="news__tab" type="button">Стажировки</button>
-              <button class="news__tab" type="button">Карьера</button>
-              <button class="news__tab" type="button">Путешествия</button>
+            <div class="news__tabs" data-news-tabs="news-tabs">
+              <button class="news__tab is-active" type="button" data-news-tab="news-tab" data-filter="all">Общее</button>
+              <button class="news__tab" type="button" data-news-tab="news-tab" data-filter="internship">Стажировки</button>
+              <button class="news__tab" type="button" data-news-tab="news-tab" data-filter="volunteering">Волонтёрство</button>
+              <button class="news__tab" type="button" data-news-tab="news-tab" data-filter="career">Карьера</button>
+              <button class="news__tab" type="button" data-news-tab="news-tab" data-filter="travel">Путешествия</button>
             </div>
             <div class="news__slider swiper" data-news-slider="data-news-slider">
               <ul class="news__list swiper-wrapper">
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="internship">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="330" srcset="img/content/news/news-1-mobile.webp 1x, img/content/news/news-1-mobile@2x.webp 2x">
@@ -544,7 +544,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="travel">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-2-mobile.webp 1x, img/content/news/news-2-mobile@2x.webp 2x">
@@ -585,7 +585,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="volunteering">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-3-mobile.webp 1x, img/content/news/news-3-mobile@2x.webp 2x">
@@ -626,7 +626,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="career">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-4-mobile.webp 1x, img/content/news/news-4-mobile@2x.webp 2x">
@@ -667,7 +667,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="travel">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-2-mobile.webp 1x, img/content/news/news-2-mobile@2x.webp 2x">
@@ -708,7 +708,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="volunteering">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-3-mobile.webp 1x, img/content/news/news-3-mobile@2x.webp 2x">
@@ -749,7 +749,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="career">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-4-mobile.webp 1x, img/content/news/news-4-mobile@2x.webp 2x">
