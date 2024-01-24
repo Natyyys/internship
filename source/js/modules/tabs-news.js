@@ -1,3 +1,5 @@
+import {swiper} from './slider-news';
+
 const ACTIVE_CLASS = 'is-active';
 const buttonContainer = document.querySelector('[data-news-tabs="news-tabs"]');
 const buttonTabs = buttonContainer.querySelectorAll('[data-news-tab="news-tab"]');
@@ -29,6 +31,7 @@ const onTabContainerClick = (evt) => {
 
     const filter = currentTab.dataset.filter || 'all';
     updateNewsElement(filter);
+    swiper.update();
   }
 };
 
