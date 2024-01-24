@@ -128,3 +128,7 @@
     width: calc(100% - 118px);
   }
 }
+
+.swiper-grid>.swiper-wrapper {
+  flex-wrap: wrap;
+}
