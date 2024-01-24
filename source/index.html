@@ -445,13 +445,13 @@
               <div class="programs__controls">
                 <div class="programs__scrollbar swiper-scrollbar" data-programs-scrollbar="data-programs-scrollbar"></div>
                 <div class="programs__controls-buttons">
-                  <button class="programs__button programs__button--prev " type="button" data-programs-prev="data-programs-prev">
+                  <button class="swiper__button swiper__button--prev " type="button" data-programs-prev="data-programs-prev">
                     <span class="visually-hidden">Назад.</span>
                     <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
                       <use href="/__spritemap#sprite-arrow"></use>
                     </svg>
                   </button>
-                  <button class="programs__button programs__button--next" type="button" data-programs-next="data-programs-next">
+                  <button class="swiper__button swiper__button--next" type="button" data-programs-next="data-programs-next">
                     <span class="visually-hidden">Вперед.</span>
                     <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
                       <use href="/__spritemap#sprite-arrow"></use>
@@ -531,7 +531,7 @@
                       </svg>
                     </div>
                     <div class="news__text-content">
-                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                      <p>Саша рассказывает, как попала в программу<br> и как прошла 6-месячная стажировка в ISOFound</p>
                       <a class="button button--arrow" href="#">
                         <span class="visually-hidden">Открыть новость.</span>
                         <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
@@ -791,9 +791,21 @@
                   </div>
                 </li>
               </ul>
-              <div class="news__pagination" data-news-pagination="data-news-pagination"></div>
-              <div class="swiper-button-prev" data-news-prev="data-news-prev"></div>
-              <div class="swiper-button-next" data-news-next="data-news-next"></div>
+              <div class="news__controls">
+                <button class="swiper__button swiper__button--prev " type="button" data-news-prev="data-news-prev">
+                  <span class="visually-hidden">Назад.</span>
+                  <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </button>
+                <div class="news__pagination" data-news-pagination="data-news-pagination"></div>
+                <button class="swiper__button swiper__button--next" type="button" data-news-next="data-news-next">
+                  <span class="visually-hidden">Вперед.</span>
+                  <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </section>
