@@ -1,0 +1,285 @@
+.faq {
+  min-height: 872px;
+
+  @include vp-1439 {
+    min-height: 726px;
+  }
+
+  @include vp-767 {
+    min-height: 711px;
+  }
+}
+
+.faq__container {
+  display: flex;
+  flex-direction: column;
+  gap: 67px 0;
+  padding-top: 3px;
+  align-items: center;
+
+  @include vp-1439 {
+   padding-top: 0;
+   margin-top: -1px;
+   gap: 41px 0;
+  }
+
+  @include vp-767 {
+    padding-top: 2px;
+    margin: 0;
+    gap: 33px 0;
+
+    h2 {
+      margin-left: -1px;
+    }
+  }
+}
+
+.faq__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 1028px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+
+  @include vp-1439 {
+    width: 100%;
+  }
+}
+
+.faq__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 31px 39px 20px;
+  align-items: center;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+
+  @include vp-1439 {
+    padding: 21px 29px 8px;
+  }
+
+  @include vp-767 {
+    border-radius: 14px;
+    padding: 18px 14px 4px;
+  }
+
+  b {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: $color-cerulean-blue;
+    width: 64%;
+
+    br {
+      display: none;
+    }
+
+    br + br {
+      display: block;
+    }
+
+    @include vp-1439 {
+      font-size: 22px;
+      line-height: 26px;
+      width: 80%;
+      padding-top: 3px;
+      padding-right: 10px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+      padding-top: 1px;
+      padding-right: 20px;
+
+      br {
+        display: block;
+      }
+
+      br + br {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-cerulean-blue;
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 1px;
+      background-color: $color-default-white;
+      right: 50%;
+      top: 18px;
+      transform: translateX(50%);
+    }
+
+    &::after {
+      right: 25%;
+      transform: rotate(90deg);
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0 250px 0 0;
+    color: $color-alabaster;
+
+    p + p {
+      padding-top: 10px;
+    }
+
+    br {
+      display: none;
+    }
+
+    br + br {
+      display: block;
+    }
+
+    br + br + br {
+      display: none;
+    }
+
+    @include vp-1439 {
+      line-height: 20px;
+      padding-right: 35px;
+
+      br {
+        display: block;
+      }
+
+      br + br {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      padding-right: 10px;
+
+      br + br + br {
+        display: block;
+      }
+    }
+  }
+}
+
+.faq__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  align-items: flex-start;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 13px;
+
+  @include vp-1439 {
+    margin-bottom: 16px;
+  }
+
+  @include vp-767 {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  span {
+    margin-top: 8px;
+
+    @include vp-767 {
+      margin-top: 0;
+    }
+  }
+}
+
+.faq__item--single-line {
+  .faq__content {
+    padding: 39px 39px 26px;
+
+    @include vp-1439 {
+      padding: 29px 29px 13px;
+    }
+
+    @include vp-767 {
+      padding: 19px 14px 4px;
+    }
+  }
+
+  b {
+    padding-top: 2px;
+
+    br {
+      display: none;
+    }
+
+    @include vp-1439 {
+      padding-top: 7px;
+    }
+
+    @include vp-767 {
+      padding-top: 2px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  span {
+    margin: 0;
+  }
+}
+
+.faq__item.is-active {
+  .faq__content {
+    background: $color-cerulean-blue;
+
+    b {
+      color: $color-default-white;
+    }
+
+    span {
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+
+      &::before {
+        background: $color-cerulean-blue;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .faq__text {
+    margin-bottom: 6px;
+
+    @include vp-1439 {
+      margin-bottom: 12px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -14,7 +14,9 @@ function onScrollHeader() {
       header.classList.add('header_hidden'); // то скрываем header
     }
     if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
-      header.classList.remove('header_hidden'); // то отображаем header
+      setTimeout(() => {
+        header.classList.remove('header_hidden'); // то отображаем header
+      }, 300);
     }
 
     prevScroll = currentScroll; // записываем на сколько прокручена страница на данный момент

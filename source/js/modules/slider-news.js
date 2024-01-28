@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 
 const newsSlider = document.querySelector('[data-news-slider]');
 const pagination = document.querySelector('[data-news-pagination]');
@@ -7,39 +6,40 @@ const buttonPrev = document.querySelector('[data-news-prev]');
 const buttonNext = document.querySelector('[data-news-next]');
 
 const swiper = new Swiper(newsSlider, {
-  modules: [Navigation, Pagination, Grid],
   speed: 1500,
   loop: false,
   updateOnWindowResize: true,
+  observeSlideChildren: true,
 
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 20,
-      slidesPerGroup: 1,
-      grid: {
-        rows: 2,
-        fill: 'row',
-      },
+      slidesPerGroup: 2,
+      // grid: {
+      //   rows: 2,
+      //   fill: 'row',
+      // },
       allowTouchMove: true,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 4,
+      slidesPerGroup: 2,
       spaceBetween: 30,
-      slidesPerGroup: 1,
-      grid: {
-        rows: 2,
-        fill: 'column',
-      },
+
+      // grid: {
+      // rows: 2,
+      // fill: 'column',
+      // },
       allowTouchMove: true,
     },
     1440: {
       slidesPerView: 'auto',
-      slidesPerGroup: 2,
+      // slidesPerGroup: 2,
       spaceBetween: 32,
-      grid: {
-        rows: 1,
-      },
+      // grid: {
+      //   rows: 1,
+      // },
       allowTouchMove: false,
     },
   },

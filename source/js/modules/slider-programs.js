@@ -1,5 +1,4 @@
-import Swiper from 'swiper';
-import { Navigation, Scrollbar } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 
 const programsSlider = document.querySelector('[data-programs-slider]');
 const buttonPrev = document.querySelector('[data-programs-prev]');
@@ -8,7 +7,6 @@ const scrollbar = document.querySelector('[data-programs-scrollbar]');
 
 const initProgramsSlider = () => {
   const swiper = new Swiper(programsSlider, {
-    modules: [Navigation, Scrollbar],
     speed: 1500,
     loop: false,
     navigation: {
@@ -42,7 +40,7 @@ const initProgramsSlider = () => {
         spaceBetween: 32,
         allowTouchMove: false,
         scrollbar: {
-          dragSize: 392,
+          dragSize: '392',
         },
       },
     },

@@ -97,7 +97,7 @@
         <h1 class="visually-hidden">Проект "стажировка" - повышение квалификациимолодых специалистов</h1>
         <div class="swiper" data-hero-slider="data-hero-slider">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide" tabindex="0">
+            <li class="swiper-slide">
               <div class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-1-mobile.webp 1x, img/content/hero/slide-1-mobile@2x.webp 2x">
@@ -131,7 +131,7 @@
                 </div>
               </div>
             </li>
-            <li class="swiper-slide" tabindex="0">
+            <li class="swiper-slide">
               <div class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.webp 1x, img/content/hero/slide-2-mobile@2x.webp 2x">
@@ -165,7 +165,7 @@
                 </div>
               </div>
             </li>
-            <li class="swiper-slide" tabindex="0">
+            <li class="swiper-slide">
               <div class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-3-mobile.webp 1x, img/content/hero/slide-3-mobile@2x.webp 2x">
@@ -531,7 +531,7 @@
                       </svg>
                     </div>
                     <div class="news__text-content">
-                      <p>Саша рассказывает, как попала в программу<br> и как прошла 6-месячная стажировка в ISOFound</p>
+                      <p>Саша рассказывает, <br>как попала в программу<br> и как прошла 6-месячная стажировка в ISOFound</p>
                       <a class="button button--arrow" href="#">
                         <span class="visually-hidden">Открыть новость.</span>
                         <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
@@ -790,7 +790,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="travel">
+                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="travel">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-2-mobile.webp 1x, img/content/news/news-2-mobile@2x.webp 2x">
@@ -830,8 +830,8 @@
                       </svg>
                     </div>
                   </div>
-                </li>
-                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="volunteering">
+                </li> -->
+                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="volunteering">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-3-mobile.webp 1x, img/content/news/news-3-mobile@2x.webp 2x">
@@ -871,8 +871,8 @@
                       </svg>
                     </div>
                   </div>
-                </li>
-                <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="career">
+                </li> -->
+                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="career">
                   <div class="news__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-4-mobile.webp 1x, img/content/news/news-4-mobile@2x.webp 2x">
@@ -912,7 +912,7 @@
                       </svg>
                     </div>
                   </div>
-                </li>
+                </li> -->
               </ul>
               <div class="news__controls">
                 <button class="swiper__button swiper__button--prev " type="button" data-news-prev="data-news-prev">
@@ -933,7 +933,72 @@
           </div>
         </section>
 
-        <div data-test="FAQ">FAQ</div>
+        <section class="faq" data-test="FAQ">
+          <div class="faq__container container">
+            <h2>Вопросы и ответы</h2>
+              <div class="faq__wrapper">
+                <ul class="faq__list" data-accordion="parent">
+                  <li class="faq__item faq__item--single-line" data-accordion="element">
+                    <div class="faq__content">
+                      <button class="faq__button" type="button" data-accordion="button">
+                        <b>Кто организатор? Какие сроки у программы?</b>
+                        <span></span>
+                      </button>
+                      <div class="faq__text" data-accordion="content">
+                        <p>Организатором программы является правительство в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.Соискатели могут продолжить стажировку от 1 до 6 месяцев. Рекомендуем студентам оставаться в течение полных 6 месяцев, чтобы получить максимум знаний.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="faq__item faq__item--single-line" data-accordion="element">
+                    <div class="faq__content">
+                      <button class="faq__button" type="button" data-accordion="button">
+                        <b>Что такое грант<br> на обучение?</b>
+                        <span></span>
+                      </button>
+                      <div class="faq__text" data-accordion="content">
+                        <p>Денежные средства, получаемые от грантодателя безвозмездно и безвозвратно на обучение или стажировку в российских и зарубежных образовательных или научных организациях.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="faq__item faq__item--single-line is-active" data-accordion="element">
+                    <div class="faq__content">
+                      <button class="faq__button" type="button" data-accordion="button">
+                        <b>Как определяется стоимость программы?</b>
+                        <span></span>
+                      </button>
+                      <div class="faq__text" data-accordion="content">
+                        <p>Полная стоимость определяется организаторами в зависимости<br> от направления.<br> В большинстве случаев грант «Стажировка»<br> не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="faq__item" data-accordion="element">
+                    <div class="faq__content">
+                      <button class="faq__button" type="button" data-accordion="button">
+                        <b>Признаётся ли учёба<br> в рамках проекта <br>для дальнейшего обучения?</b>
+                        <span></span>
+                      </button>
+                      <div class="faq__text" data-accordion="content">
+                        <p>Проект помогаут не только улучшить навыки коммуникации и владения иностранным языком, но и повысить свою конкурентоспособность на трудовом рынке, почувствовать разницу между образовательными системами государств и продолжить обучение в высших учебных заведениях.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="faq__item" data-accordion="element">
+                    <div class="faq__content">
+                      <button class="faq__button" type="button" data-accordion="button">
+                        <b>Как выглядит полный процесс регистрации на программу «Стажировка»?</b>
+                        <span></span>
+                      </button>
+                      <div class="faq__text" data-accordion="content">
+                        <p>Процесс регистрации на программу включает выбор ВУЗа и программы; подготовка и подача документов; оформление заявки на участие; оформление документов для отъезда на обучение.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div data-test="reviews">reviews</div>
         <div data-test="contacts">contacts</div>
         <div data-test="form">form</div>
