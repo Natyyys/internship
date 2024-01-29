@@ -4,6 +4,10 @@
   @include vp-1439 {
     padding: 0 0 0 45px;
   }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
 }
 
 .reviews__container{
@@ -17,6 +21,10 @@
     gap: 40px 0;
   }
 
+  @include vp-767 {
+    gap: 31px 0;position: relative;
+  }
+
   h2 {
     margin-left: 3px;
     padding-top: 4px;
@@ -25,6 +33,11 @@
       margin-left: 0;
       margin-top: -1px;
       padding-top: 0;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+      padding-top: 3px;
     }
   }
 }
@@ -41,6 +54,10 @@
   @include vp-1439 {
     overflow: hidden;
   }
+
+  @include vp-767 {
+    position: static;
+  }
 }
 
 .reviews__slider-list {
@@ -51,6 +68,10 @@
 
   @include vp-1439 {
     width: 560px;
+  }
+
+  @include vp-767 {
+    width: 290px;
   }
 }
 
@@ -68,6 +89,11 @@
     width: 560px;
     padding: 50px 49px 45px 49px;
   }
+
+  @include vp-767 {
+    padding: 30px 12px 25px 14px;
+    height: fit-content;
+  }
 }
 
 .reviews__heading {
@@ -75,6 +101,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 15px 0;
+  }
 }
 
 .reviews__user{
@@ -84,12 +115,31 @@
   align-items: center;
   gap: 0 15px;
 
+  @include vp-767 {
+    align-self: stretch;
+    gap: 0 10px;
+  }
+
   h3 {
     font-size: 18px;
     line-height: 24px;
 
     @include vp-1439 {
       font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.reviews__image-wrapper {
+  @include vp-767 {
+    img {
+      width: 60px;
+      height: 60px;
     }
   }
 }
@@ -101,6 +151,10 @@
   display: flex;
   flex-direction: row;
   gap: 0 25px;
+
+  @include vp-767 {
+    align-self: stretch;
+  }
 }
 
 .reviews__details-item {
@@ -122,6 +176,12 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      opacity: 0.9;
+    }
   }
 }
 
@@ -132,6 +192,10 @@
 
   @include vp-1439 {
     gap: 16px 0;
+  }
+
+  @include vp-767 {
+    gap: 15px 0;
   }
 
   b {
@@ -148,6 +212,11 @@
         display: none;
       }
     }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   blockquote {
@@ -162,6 +231,14 @@
 
       br {
         display: block;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+
+      br {
+        display: none;
       }
     }
   }
