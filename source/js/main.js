@@ -5,6 +5,7 @@ import {onScrollHeader} from './modules/sticky-header';
 import {initProgramsSlider} from './modules/slider-programs';
 import {initNewsSlider} from './modules/slider-news';
 import {initNewsFilter} from './modules/tabs-news';
+import {initReviewsSlider} from './modules/slider-reviews';
 
 window.addEventListener('DOMContentLoaded', () => {
   onScrollHeader();
@@ -16,5 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initProgramsSlider();
     initNewsSlider();
     initNewsFilter();
+    initReviewsSlider();
   });
 });
