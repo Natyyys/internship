@@ -18,9 +18,9 @@
   align-items: center;
 
   @include vp-1439 {
-   padding-top: 0;
-   margin-top: -1px;
-   gap: 41px 0;
+    padding-top: 0;
+    margin-top: -1px;
+    gap: 41px 0;
   }
 
   @include vp-767 {
@@ -49,22 +49,79 @@
   }
 }
 
-.faq__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 31px 39px 20px;
-  align-items: center;
+.faq__item {
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
 
+  @include vp-767 {
+    border-radius: 14px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 290px 0 40px;
+    color: $color-alabaster;
+
+    p + p {
+      padding-top: 10px;
+    }
+
+    br {
+      display: none;
+    }
+
+    br + br {
+      display: block;
+    }
+
+    br + br + br {
+      display: none;
+    }
+
+    @include vp-1439 {
+      line-height: 20px;
+      padding: 0 61px 0 30px;
+
+      br {
+        display: block;
+      }
+
+      br + br {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 40px 0 15px;
+
+      br + br + br {
+        display: block;
+      }
+    }
+  }
+}
+
+.faq__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 31px 39px 33px;
+  text-align: start;
+  border-radius: 16px;
+
   @include vp-1439 {
-    padding: 21px 29px 8px;
+    padding: 21px 29px 24px;
   }
 
   @include vp-767 {
-    border-radius: 14px;
-    padding: 18px 14px 4px;
+    padding: 18px 14px 19px;
   }
 
   b {
@@ -113,8 +170,14 @@
     border-radius: 50%;
     background-color: $color-cerulean-blue;
     border: 1px solid $color-cerulean-blue;
+    margin-top: 8px;
     position: relative;
     cursor: pointer;
+
+    @include vp-1439 {
+      margin-top: 0;
+      align-self: center;
+    }
 
     &::before,
     &::after {
@@ -134,102 +197,63 @@
     }
   }
 
-  p {
-    margin: 0;
-    padding: 0 250px 0 0;
-    color: $color-alabaster;
+  &:hover,
+  &:focus,
+  &:focus-visible{
+    background-color: $color-default-white;
 
-    p + p {
-      padding-top: 10px;
+    span {
+      background-color: transparent;
+      border: 1px solid $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-default-white;
+
+    b {
+      color: $color-endeavour;
     }
 
-    br {
-      display: none;
-    }
-
-    br + br {
-      display: block;
-    }
-
-    br + br + br {
-      display: none;
-    }
-
-    @include vp-1439 {
-      line-height: 20px;
-      padding-right: 35px;
-
-      br {
-        display: block;
-      }
-
-      br + br {
-        display: none;
-      }
-    }
-
-    @include vp-767 {
-      font-size: 14px;
-      line-height: 20px;
-      padding-right: 10px;
-
-      br + br + br {
-        display: block;
-      }
+    span {
+      background-color: transparent;
     }
   }
 }
 
-.faq__button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  text-align: left;
-  align-items: flex-start;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-  margin-bottom: 13px;
+.faq__button:hover span::after,
+.faq__button:focus span::after,
+.faq__button:focus-visible span::after,
+.faq__button:hover span::before,
+.faq__button:focus span::before,
+.faq__button:focus-visible span::before {
+  background-color: $color-cerulean-blue;
+}
 
-  @include vp-1439 {
-    margin-bottom: 16px;
-  }
+.faq__button:active span {
+  background-color: $color-endeavour;
 
-  @include vp-767 {
-    align-items: center;
-    margin-bottom: 15px;
-  }
-
-  span {
-    margin-top: 8px;
-
-    @include vp-767 {
-      margin-top: 0;
-    }
+  &::before,
+  &::after {
+    background: $color-default-white;
   }
 }
 
 .faq__item--single-line {
-  .faq__content {
-    padding: 39px 39px 26px;
+  .faq__button {
+    padding: 39px;
 
     @include vp-1439 {
-      padding: 29px 29px 13px;
+      padding: 29px;
     }
 
     @include vp-767 {
-      padding: 19px 14px 4px;
+      padding: 19px 14px;
     }
   }
 
   b {
     padding-top: 2px;
-
-    br {
-      display: none;
-    }
 
     @include vp-1439 {
       padding-top: 7px;
@@ -237,49 +261,94 @@
 
     @include vp-767 {
       padding-top: 2px;
-
-      br {
-        display: block;
-      }
     }
   }
 
   span {
-    margin: 0;
+    margin-top: 0;
+  }
+}
+
+.faq__item.is-active .faq__button:hover,
+.faq__item.is-active .faq__button:focus,
+.faq__item.is-active .faq__button:focus-visible {
+  background-color: transparent;
+  outline: none;
+
+  span {
+    border: 1px solid $color-default-white;
+    background-color: transparent;
+
+    &::before {
+      background: $color-default-white;
+    }
+  }
+}
+
+.faq__item.is-active .faq__button:active {
+  background-color: transparent;
+
+  span {
+    background: $color-default-white;
+  }
+
+  span::before,
+  span::after {
+    background-color: $color-endeavour;
   }
 }
 
 .faq__item.is-active {
-  .faq__content {
-    background: $color-cerulean-blue;
+  background-color: $color-cerulean-blue;
+  border: none;
+  padding-bottom: 33px;
 
-    b {
-      color: $color-default-white;
-    }
-
-    span {
-      background-color: $color-default-white;
-      border: 1px solid $color-default-white;
-
-      &::before {
-        background: $color-cerulean-blue;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
+  @include vp-1439 {
+    padding-bottom: 26px;
   }
 
-  .faq__text {
-    margin-bottom: 6px;
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+
+  .faq__button {
+    padding: 40px 40px 13px;
 
     @include vp-1439 {
-      margin-bottom: 12px;
+      padding: 30px 30px 16px;
     }
 
     @include vp-767 {
-      margin-bottom: 10px;
+      padding: 20px 15px 15px;
     }
+  }
+
+  b {
+    color: $color-default-white;
+  }
+
+  span {
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background: $color-cerulean-blue;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:has(.faq__button:hover),
+  &:has(.faq__button:focus),
+  &:has(.faq__button:focus-visible) {
+    background-color: $color-cerulean-blue;
+    outline: 2px solid $color-default-white;
+  }
+
+  &:has(.faq__button:active) {
+    background-color: $color-endeavour;
+    outline: none;
   }
 }
