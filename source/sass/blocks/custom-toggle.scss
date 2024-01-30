@@ -5,6 +5,10 @@
   width: 100%;
   margin-bottom: 24px;
 
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+
   label {
     position: relative;
     width: 100%;
@@ -29,6 +33,11 @@
     border: 1px solid $color-white-70;
     transition: border .3s ease;
     cursor: pointer;
+
+    @include vp-767 {
+      padding: 6px 8px;
+      margin-top: -2px;
+    }
   }
 
   svg {
@@ -37,6 +46,20 @@
     bottom: 5px;
     stroke-width: 3px;
     display: none;
+
+    @include vp-767 {
+      bottom: 10px;
+    }
+  }
+
+  span {
+    opacity: 0.9;
+    font-size: 12px;
+    line-height: 1;
+
+    @include vp-767 {
+     line-height: 14px;
+    }
   }
 }
 
