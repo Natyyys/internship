@@ -72,6 +72,7 @@
 
   @include vp-767 {
     width: 290px;
+    margin-bottom: 0;
   }
 }
 
@@ -91,7 +92,7 @@
   }
 
   @include vp-767 {
-    padding: 30px 12px 25px 14px;
+    padding: 30px 12px 24px 14px;
     height: fit-content;
   }
 }
@@ -250,6 +251,14 @@
 
     br {
       display: block;
+    }
+
+    @include vp-767 {
+      padding-right: 0;
+
+      br {
+        display: none;
+      }
     }
   }
 }
