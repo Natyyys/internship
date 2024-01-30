@@ -53,6 +53,10 @@
   opacity: 0.8;
   transition: opacity .3s ease;
   margin-bottom: 2px;
+
+  @include vp-1439 {
+    margin-bottom: 0;
+  }
 }
 
 .custom-select__button {

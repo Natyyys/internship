@@ -1231,8 +1231,12 @@
             </div>
             <div class="feedback__image">
               <picture>
-                <source type="image/webp" width="1240" height="803" srcset="img/content/form/form-background.webp 1x, img/content/form/form-background@2x.webp 2x">
-                <img src="img/content/form/form-background.jpg" srcset="img/content/form/form-background@2.jpg 2x" width="1240" height="803" alt="" loading="lazy">
+                <source type="image/webp" media="(max-width: 767px)" width="320" height="753" srcset="img/content/feedback/feedback-mobile.webp 1x, img/content/feedback/feedback-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1439px)" width="678" height="780" srcset="img/content/feedback/feedback-tablet.webp 1x, img/content/feedback/feedback-tablet@2x.webp 2x">
+                <source type="image/webp" width="1753" height="803" srcset="img/content/feedback/feedback-desktop.webp 1x, img/content/feedback/feedback-desktop@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" width="320" height="240" srcset="img/content/feedback/feedback-mobile.jpg 1x, img/content/feedback/feedback-mobile@2x.jpg 2x">
+                <source type="image/png" media="(max-width: 1439px)" width="678" height="780" srcset="img/content/feedback/feedback-tablet.jpg 1x, img/content/feedback/feedback-tablet@2x.jpg 2x">
+                <img src="img/content/feedback/feedback-desktop.jpg" srcset="img/content/feedback/feedback-desktop@2.jpg 2x" width="1240" height="803" alt="" loading="lazy">
               </picture>
             </div>
           </div>
