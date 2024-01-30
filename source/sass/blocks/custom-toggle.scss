@@ -1,0 +1,110 @@
+.custom-toggle {
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  width: 100%;
+  margin-bottom: 24px;
+
+  label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+
+  div {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid $color-white-70;
+    transition: border .3s ease;
+    cursor: pointer;
+  }
+
+  svg {
+    position: absolute;
+    left: 6px;
+    bottom: 5px;
+    stroke-width: 3px;
+    display: none;
+  }
+}
+
+.custom-toggle input {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    + div {
+      border: 1px solid $color-default-white;
+    }
+  }
+}
+
+.custom-toggle input {
+  &:disabled {
+    + div {
+      border: 1px solid $color-default-white;
+      background: $color-white-60;
+    }
+  }
+}
+
+.custom-toggle input:checked {
+  + div {
+    border: 1px solid $color-default-white;
+    background: $color-default-white;
+  }
+
+  ~ svg {
+    color: $color-cerulean-blue;
+    display: block;
+  }
+}
+
+.custom-toggle input:checked {
+  &:hover,
+  &:focus  {
+    + div {
+      border: 1px solid $color-default-white;
+      background: transparent;
+    }
+
+    ~ svg {
+      color: $color-default-white;
+      display: block;
+    }
+  }
+}
+
+.custom-toggle input:checked {
+  &:disabled {
+    + div {
+      border: 1px solid $color-mischka;
+      background: $color-mischka;
+    }
+
+    ~ svg {
+      color: $color-default-white;
+      display: block;
+    }
+  }
+}
+
+.custom-toggle.is-invalid {
+  div {
+    background: $color-wild-watermelon-20;
+    border: 1px solid $color-wild-watermelon;
+  }
+}
+
+

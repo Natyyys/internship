@@ -1,3 +1,5 @@
+import { Form } from './vendor/form-validate/form';
+import {CustomSelect} from './vendor/select/custom-select';
 import {addToggleMenu} from './modules/toggle-menu';
 import {initAccordions} from './vendor/accordion/init-accordion';
 import {initHeroSlider} from './modules/slider-hero';
@@ -18,5 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
     initNewsSlider();
     initNewsFilter();
     initReviewsSlider();
+    const form = new Form();
+    window.form = form;
+    form.init();
+    const select = new CustomSelect();
+    select.init();
   });
 });

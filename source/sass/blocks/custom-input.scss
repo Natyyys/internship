@@ -1,0 +1,142 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  appearance: none;
+
+  label {
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.8;
+    color: $color-alabaster;
+    transition: opacity .3s ease;
+  }
+
+  input,
+  textarea {
+    flex-grow: 1;
+    width: 350px;
+    height: 50px;
+    padding: 15px 24px;
+    border-radius: 8px;
+    border: 1px solid $color-white-30;
+    background: transparent;
+    color: $color-default-white;
+    transition: border .3s ease;
+    appearance: none;
+  }
+
+  &:has(input:hover),
+  &:has(textarea:hover) {
+    label {
+      opacity: 1;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible),
+  &:has(input:active),
+  &:has(textarea:focus),
+  &:has(textarea:focus-visible),
+  &:has(textarea:active) {
+    label {
+      opacity: 1;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-default-white;
+      outline: none;
+    }
+  }
+
+  &:has(input:disabled, textarea:disabled) {
+    label {
+      opacity: 0.6;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-white-40;
+      background: $color-white-20;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  textarea {
+    height: 98px;
+    resize: none;
+    margin-bottom: 4px;
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      background: $color-wild-watermelon-20;
+      border: 1px solid $color-wild-watermelon;
+    }
+  }
+}
+
+.custom-input--white {
+  label {
+    color: $color-charcoal;
+  }
+
+  input,
+  textarea {
+    border: 1px solid $color-charcoal-30;
+    color: $color-charcoal;
+  }
+
+  &:has(input:hover),
+  &:has(textarea:hover) {
+    label {
+      opacity: 1;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-charcoal;
+    }
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible),
+  &:has(input:active),
+  &:has(textarea:focus),
+  &:has(textarea:focus-visible),
+  &:has(textarea:active) {
+    label {
+      opacity: 1;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-charcoal;
+      outline: none;
+    }
+  }
+
+  &:has(input:disabled, textarea:disabled) {
+    label {
+      color: $color-mischka;
+      opacity: 0.6;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $color-mischka-50;
+      background: $color-mischka-20;;
+    }
+  }
+}

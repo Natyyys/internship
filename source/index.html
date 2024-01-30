@@ -1173,7 +1173,70 @@
           </div>
         </section>
 
-        <div data-test="form">form</div>
+        <section class="feedback" data-test="form">
+          <h2 class="visually-hidden">Форма обратной связи.</h2>
+          <div class="feedback__container container">
+            <div class="feedback__form" data-form-validate="data-form-validate" data-callback="base">
+              <h3>Напишите нам</h3>
+              <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp; -&nbsp; мы на них ответим!</p>
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="custom-input"  data-validate-type="text" data-limitation="name" data-required="data-required">
+                  <label class="custom-input__label custom-input__label--primary" for="user-name">Имя</label>
+                  <input type="text" name="name" id="user-name" autocomplete="off" required>
+                </div>
+                <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required="data-required">
+                  <label class="custom-input__label custom-input__label--primary" for="phone">Телефон</label>
+                  <input type="tel" name="phone" id="phone" autocomplete="off" required>
+                </div>
+                <div class="custom-textarea" data-validate-type="text" data-required="data-required">
+                  <label class="custom-textarea__label" for="message">Ваше сообщение</label>
+                  <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="city" data-id="city" data-required="data-required">
+                  <span class="custom-select__label">Выберите город</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span>
+                    <span class="custom-select__icon">
+                      <svg role="img" width="16" height="16" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Екатеринбург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Казань</li>
+                  </ul>
+                </div>
+                <div class="custom-toggle" data-validate-type="checkbox" data-required="data-required">
+                  <label>
+                    <input type="checkbox" name="confirmation" value="agree" aria-label="Согласие на обработку персональных данных." required>
+                    <div></div>
+                    <svg role="img" width="8" height="10" aria-hidden="true" focusable="false">
+                      <use href="/__spritemap#sprite-check"></use>
+                    </svg>
+                    <span class="checkbox__text">
+                      <span>Я согласен на обработку моих персональных данных</span>
+                    </span>
+                  </label>
+                </div>
+                <button class="feedback__button button button--dark" type="submit">
+                  <span>Отправить</span>
+                  <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="feedback__image">
+              <picture>
+                <source type="image/webp" width="1240" height="803" srcset="img/content/form/form-background.webp 1x, img/content/form/form-background@2x.webp 2x">
+                <img src="img/content/form/form-background.jpg" srcset="img/content/form/form-background@2.jpg 2x" width="1240" height="803" alt="" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 

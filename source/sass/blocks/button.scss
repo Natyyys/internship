@@ -118,4 +118,47 @@
       background-color: $color-default-white;
     }
   }
+
+  &--dark {
+    border: 1px solid $color-default-white;
+
+    span {
+      color: $color-default-white;
+    }
+
+    svg {
+      background-color:$color-default-white;
+      color: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: $color-default-white;
+
+      span {
+        color: $color-cerulean-blue;
+      }
+
+      svg {
+        background-color: $color-cerulean-blue;
+        color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      outline: none;
+
+      span {
+        color: $color-cerulean-blue;
+        opacity: 0.7;
+      }
+
+      svg {
+        background-color: $color-cerulean-blue;
+        color: $color-white-70;
+      }
+    }
+  }
 }
