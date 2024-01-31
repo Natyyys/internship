@@ -4,16 +4,16 @@
   flex-wrap: wrap;
   padding-top: 120px;
   padding-bottom: 120px;
-  gap: 120px 0;
+  // gap: 120px 0;
 
   @include vp-1439 {
-    gap: 100px 0;
+    // gap: 100px 0;
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    gap: 60px 0;
+    // gap: 60px 0;
     padding-top: 60px;
     padding-bottom: 60px;
   }

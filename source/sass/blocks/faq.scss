@@ -1,12 +1,16 @@
 .faq {
   min-height: 872px;
+  margin-bottom: 120px;
 
   @include vp-1439 {
     min-height: 726px;
+    margin-bottom: 100px;
   }
 
   @include vp-767 {
     min-height: 711px;
+    margin-bottom: 60px;
+
   }
 }
 

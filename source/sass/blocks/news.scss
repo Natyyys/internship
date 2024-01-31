@@ -4,15 +4,18 @@
   margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
+  margin-bottom: 120px;
 
   @include vp-1439 {
     padding-left: 45px;
     padding-right: 45px;
+    margin-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
   }
 }
 
@@ -66,6 +69,8 @@
     overflow-x: auto;
     gap: 11px;
     padding: 0;
+    margin-left: 15px;
+    width: calc(100% - 15px);
   }
 }
 
@@ -110,6 +115,11 @@
 
 .news__slider {
   width: 100%;
+
+  @include vp-767 {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
 }
 
 .news__list {
@@ -128,8 +138,8 @@
 
   @include vp-767 {
     height: 590px;
-    margin-bottom: 24px;
     gap: 20px 0;
+    margin-bottom: 24px;
   }
 }
 
@@ -194,6 +204,10 @@
     width: calc(207 / 324 * 100%);
   }
 
+  @include vp-767 {
+    width: calc(221 / 320 * 100%);
+  }
+
   h3 {
     background: $color-alabaster;
     padding: 5px 18px 0 0;
@@ -201,6 +215,14 @@
 
     @include vp-1439 {
       padding: 5px 18px 1px 0;
+    }
+
+    @include vp-767 {
+      padding: 10px 18px 4px 0;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -226,6 +248,17 @@
   @include vp-1439 {
     width: calc(240 / 324 * 100%);
     padding: 7px 18px 10px 0;
+  }
+
+  @include vp-767 {
+    width: calc(263 / 290 * 100%);
+    padding: 12px 10px 10px 0;
+  }
+
+  p {
+    @include vp-767 {
+      padding-top: 2px;
+    }
   }
 
   svg {
@@ -280,6 +313,26 @@
       width: 389px;
     }
   }
+
+  @include vp-767 {
+    .news__text-content {
+      padding: 11px 10px 9px 0;
+    }
+
+    p {
+      br {
+        display: none;
+      }
+
+      br + br {
+        display: block;
+      }
+
+      br + br + br {
+        display: none;
+      }
+    }
+  }
 }
 
 .news__item:nth-child(3n+3) {
@@ -297,6 +350,14 @@
     .news__text-title {
       h3 {
         padding-right: 40px;
+      }
+    }
+  }
+
+  @include vp-767 {
+    .news__text-title {
+      h3 {
+        padding-right: 15px;
       }
     }
   }
@@ -353,6 +414,10 @@
   justify-content: center;
   gap: 0 12px;
   user-select: none;
+
+  @include vp-767 {
+    gap: 0 8px;
+  }
 }
 
 .news__pagination-button {
