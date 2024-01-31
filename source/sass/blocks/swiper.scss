@@ -11,17 +11,10 @@
 }
 
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
   background-color: transparent;
   border: 1px solid $color-cerulean-blue;
   opacity: 1;
   transition: background-color .3s ease;
-
-  @include vp-767 {
-    width: 8px;
-    height: 8px;
-  }
 }
 
 .swiper .swiper-pagination-bullet-active {

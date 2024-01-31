@@ -140,8 +140,14 @@
 }
 
 .reviews__image-wrapper {
-  @include vp-767 {
-    img {
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    object-fit: cover;
+    object-position: top center;
+
+    @include vp-767 {
       width: 60px;
       height: 60px;
     }
