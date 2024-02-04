@@ -59,7 +59,21 @@
 
     @include vp-767 {
      line-height: 14px;
+     text-align: start;
     }
+  }
+}
+
+.custom-toggle--light {
+  margin-bottom: 14px;
+
+  @include vp-767 {
+    margin-top: 1px;
+    margin-bottom: 9px;
+  }
+
+  div {
+    border: 1px solid $color-charcoal-30;
   }
 }
 
@@ -73,6 +87,16 @@
   }
 }
 
+.custom-toggle--light input {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    + div {
+      border: 1px solid $color-charcoal;
+    }
+  }
+}
+
 .custom-toggle input {
   &:disabled {
     + div {
@@ -82,10 +106,31 @@
   }
 }
 
+.custom-toggle--light input {
+  &:disabled {
+    + div {
+      border: 1px solid $color-charcoal;
+      background: $color-charcoal-30;
+    }
+  }
+}
+
 .custom-toggle input:checked {
   + div {
     border: 1px solid $color-default-white;
     background: $color-default-white;
+  }
+
+  ~ svg {
+    color: $color-cerulean-blue;
+    display: block;
+  }
+}
+
+.custom-toggle--light input:checked {
+  + div {
+    border: 1px solid $color-cerulean-blue;
+    background: transparent;
   }
 
   ~ svg {
@@ -109,6 +154,21 @@
   }
 }
 
+.custom-toggle--light input:checked {
+  &:hover,
+  &:focus  {
+    + div {
+      border: 1px solid $color-cerulean-blue;
+      background: $color-cerulean-blue;
+    }
+
+    ~ svg {
+      color: $color-default-white;
+      display: block;
+    }
+  }
+}
+
 .custom-toggle input:checked {
   &:disabled {
     + div {
@@ -123,7 +183,8 @@
   }
 }
 
-.custom-toggle.is-invalid {
+.custom-toggle.is-invalid,
+.custom-toggle--light.is-invalid {
   div {
     background: $color-wild-watermelon-20;
     border: 1px solid $color-wild-watermelon;
