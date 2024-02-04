@@ -141,6 +141,7 @@
   height: 36px;
   padding: 7px 10px;
   background: $color-cerulean-blue;
+  color: $color-default-white;
   border-radius: 50%;
   align-self: center;
 
@@ -155,6 +156,21 @@
       width: 12px;
       height: 12px;
     }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-white-70;
+    outline: none;
+  }
+
+  &:active {
+    background: $color-endeavour;
+  }
+
+  &--disabled {
+    background: $color-mischka;
   }
 }
 
@@ -198,5 +214,23 @@
 
   @include vp-767 {
     margin: 0 auto;
+  }
+}
+
+.footer__nav-link,
+.footer__copyright-link {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-cerulean-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-endeavour;
+  }
+
+  &--disabled {
+    opacity: 0.6;
   }
 }
