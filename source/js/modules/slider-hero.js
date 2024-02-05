@@ -5,6 +5,7 @@ const heroSlider = document.querySelector('[data-hero-slider]');
 const initHeroSlider = () => {
   const swiper = new Swiper(heroSlider, {
     loop: true,
+    autoHeight: true,
     speed: 1500,
     effect: 'fade',
     autoplay: true,
