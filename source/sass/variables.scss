@@ -18,7 +18,7 @@ $color-endeavour: #275699;
 $color-mischka: #a9afb7;
 $color-mischka-20: rgba(169, 175, 183, 0.2);
 $color-mischka-50: rgba(169, 175, 183, 0.5);
-$color-wild-watermelon: #FF5E66;
+$color-wild-watermelon: #ff5e66;
 $color-wild-watermelon-20: rgba(255, 94, 102, 0.2);
 $color-black-pearl-40: rgba(13, 29, 51, 0.4);
 
@@ -30,10 +30,10 @@ $ff-manrope: "Manrope", "Arial", sans-serif;
 // Animation
 // ---------------------------------
 
-$tf-default:                        ease;
-$tf-ease-in:                        ease-in;
-$trans-default:                     0.3s $tf-default;
-$trans-ease-in:                     0.3s $tf-ease-in;
+$tf-default: ease;
+$tf-ease-in: ease-in;
+$trans-default: 0.3s $tf-default;
+$trans-ease-in: 0.3s $tf-ease-in;
 
 // Viewports
 $vp-320: 320px;

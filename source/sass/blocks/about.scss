@@ -97,6 +97,7 @@
 
   p {
     margin: 0;
+    padding-right: 5px;
 
     @include vp-1439 {
       line-height: 20px;
@@ -116,7 +117,7 @@
   flex-wrap: wrap;
   gap: 15px;
 
-  a {
+  button {
     gap: 31px;
 
     @include vp-767 {

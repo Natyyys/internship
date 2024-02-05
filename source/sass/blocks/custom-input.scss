@@ -17,7 +17,7 @@
     line-height: 18px;
     opacity: 0.8;
     color: $color-alabaster;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 
     @include vp-767 {
       font-size: 12px;
@@ -35,7 +35,7 @@
     border: 1px solid $color-white-30;
     background: transparent;
     color: $color-default-white;
-    transition: border .3s ease;
+    transition: border 0.3s ease;
     appearance: none;
   }
 
@@ -167,7 +167,7 @@
     input,
     textarea {
       border: 1px solid $color-mischka-50;
-      background: $color-mischka-20;;
+      background: $color-mischka-20;
     }
   }
 }

@@ -41,13 +41,9 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  a {
-    display: inline-block;
-  }
 }
 
-.footer__logo {
+.footer .logo {
   @include vp-767 {
     margin-bottom: 10px;
   }
@@ -105,6 +101,7 @@
 }
 
 .footer__nav-link {
+  display: inline-block;
   padding: 10px 15px;
 
   @include vp-1439 {

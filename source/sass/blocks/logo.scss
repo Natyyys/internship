@@ -1,0 +1,22 @@
+.logo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-default-white;
+  border-radius: 30px;
+
+  svg {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    background: $color-white-40;
+  }
+}

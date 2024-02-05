@@ -119,7 +119,8 @@
     color: $color-alabaster;
   }
 
-  p, a {
+  p,
+  a {
     @include vp-1439 {
       line-height: 20px;
     }

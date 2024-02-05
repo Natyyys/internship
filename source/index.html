@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Стажировка-современный проект правительств и волонтерских бригад">
-  <title>Internship programs</title>
+  <title>Проект "Стажировка"</title>
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="public/favicon.ico">
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
@@ -19,191 +19,191 @@
 
 <body>
   <div class="wrapper">
-    <div data-test="slider">
-      <header class="header" data-header="data-header">
-        <div class="header__container container" data-container="header-wrapper">
-          <div class="header__logo">
-            <img src="img/svg/logotype.svg" width="52" height="52" alt="Логотип Internship programs.">
-          </div>
-          <div class="header__menu">
-            <button class="header__toggle toggle" type="button" aria-label="Отображение меню." data-toggle="toggle-menu">
-              <span>Меню</span>
-              <svg role="img" width="20" height="20" aria-hidden="true" focusable="false">
-                <use href="/__spritemap#sprite-menu"></use>
-              </svg>
-              <svg role="img" width="20" height="20" aria-hidden="true" focusable="false">
-                <use href="/__spritemap#sprite-cross"></use>
-              </svg>
-            </button>
-            <nav class="header__nav nav" data-menu="menu-nav">
-              <ul class="nav__list" data-accordion="parent">
-                <li class="nav__item">
-                  <a class="nav__link" href="#about" data-link="link-menu">О проекте</a>
-                </li>
-                <li class="nav__item" data-accordion="element">
-                  <a class="nav__link nav__link--button" href="#programs" data-accordion="button" data-nav-button="data-nav-button">Программы
-                    <svg role="img" width="12" height="12" aria-hidden="true" focusable="false">
-                      <use href="/__spritemap#sprite-arrow-down"></use>
+    <header class="header" data-header="data-header">
+      <div class="header__container container" data-container="header-wrapper">
+        <a class="logo" href="#" aria-label="Логотип проекта Стажировка" aria-current="page">
+          <svg role="img" width="30" height="30"  aria-hidden="true">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </a>
+        <div class="header__menu">
+          <button class="header__toggle toggle" type="button" aria-label="Отображение меню." data-toggle="toggle-menu">
+            <span>Меню</span>
+            <svg role="img" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-menu"></use>
+            </svg>
+            <svg role="img" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-cross"></use>
+            </svg>
+          </button>
+          <nav class="header__nav nav" data-menu="menu-nav">
+            <ul class="nav__list" data-accordion="parent">
+              <li class="nav__item">
+                <a class="nav__link" href="#about" data-link="link-menu">О проекте</a>
+              </li>
+              <li class="nav__item" data-accordion="element">
+                <a class="nav__link nav__link--button" href="#programs" data-accordion="button" data-nav-button="data-nav-button">Программы
+                  <svg role="img" width="12" height="12" aria-hidden="true" focusable="false">
+                    <use href="/__spritemap#sprite-arrow-down"></use>
+                  </svg>
+                </a>
+                <ul class="nav__sub-list" data-accordion="content">
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#programs" data-link="link-menu">Стажировки</a>
+                  </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#programs" data-link="link-menu">Волонтёрство</a>
+                  </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#programs" data-link="link-menu">Учёба</a>
+                  </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#programs" data-link="link-menu">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#grant" data-link="link-menu">Как поехать</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#reviews" data-link="link-menu">Отзывы</a>
+              </li>
+              <li class="nav__item" data-accordion="element">
+                <a class="nav__link nav__link--button" href="#news" data-accordion="button">Новости
+                  <svg role="img" width="12" height="12" aria-hidden="true" focusable="false">
+                    <use href="/__spritemap#sprite-arrow-down"></use>
+                  </svg>
+                </a>
+                <ul class="nav__sub-list" data-accordion="content">
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#news" data-link="link-menu">Интервью</a>
+                  </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#news" data-link="link-menu">Путешествия</a>
+                  </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#news" data-link="link-menu">Карьера</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts" data-link="link-menu">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" data-test="slider">
+      <h1 class="visually-hidden">Проект "стажировка" - повышение квалификации молодых специалистов</h1>
+      <div class="swiper" data-hero-slider="data-hero-slider">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-1-mobile.webp 1x, img/content/hero/slide-1-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-1-tablet.webp 1x, img/content/hero/slide-1-tablet@2x.webp 2x">
+                <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-1-desktop.webp 1x, img/content/hero/slide-1-desktop@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-1-mobile.png 1x, img/content/hero/slide-1-mobile@2x.png 2x">
+                <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-1-tablet.png 1x, img/content/hero/slide-1-tablet@2x.png 2x">
+                <img src="img/content/hero/slide-1-desktop.jpg" srcset="img/content/hero/slide-1-desktop@2.jpg 2x" width="1440" height="800" alt="Девушка в желтой блузке с красными папками.">
+              </picture>
+            </div>
+            <div class="hero__content container">
+              <div class="hero__pagination-wrapper">
+                <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
+                <img src="img/svg/angle.svg" alt="" width="20" height="20">
+              </div>
+              <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;разных городах,&nbsp;ощущая настоящий студенческий стиль жизни!</p>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
+                </div>
+                <div class="hero__button-wrapper">
+                  <a class="button" href="#">
+                    <span>Подробнее</span>
+                    <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                      <use href="/__spritemap#sprite-arrow"></use>
                     </svg>
                   </a>
-                  <ul class="nav__sub-list" data-accordion="content">
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#programs" data-link="link-menu">Стажировки</a>
-                    </li>
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#programs" data-link="link-menu">Волонтёрство</a>
-                    </li>
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#programs" data-link="link-menu">Учёба</a>
-                    </li>
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#programs" data-link="link-menu">Религия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#grant" data-link="link-menu">Как поехать</a>
-                </li>
-                <li>
-                  <a class="nav__link" href="#reviews" data-link="link-menu">Отзывы</a>
-                </li>
-                <li class="nav__item" data-accordion="element">
-                  <a class="nav__link nav__link--button" href="#news" data-accordion="button">Новости
-                    <svg role="img" width="12" height="12" aria-hidden="true" focusable="false">
-                      <use href="/__spritemap#sprite-arrow-down"></use>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.webp 1x, img/content/hero/slide-2-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-2-tablet.webp 1x, img/content/hero/slide-2-tablet@2x.webp 2x">
+                <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-2-desktop.webp 1x, img/content/hero/slide-2-desktop@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.png 1x, img/content/hero/slide-2-mobile@2x.png 2x">
+                <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-2-tablet.png 1x, img/content/hero/slide-2-tablet@2x.png 2x">
+                <img src="img/content/hero/slide-2-desktop.jpg" srcset="img/content/hero/slide-2-desktop@2.jpg 2x" width="1440" height="800" alt="Люди улыбаются в камеру.">
+              </picture>
+            </div>
+            <div class="hero__content container">
+              <div class="hero__pagination-wrapper">
+                <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
+                <img src="img/svg/angle.svg" alt="" width="20" height="20">
+              </div>
+              <h2>Волонтёрские программы - внесите свой вклад в общество</h2>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
+                </div>
+                <div class="hero__button-wrapper">
+                  <a class="button" href="#">
+                    <span>Подробнее</span>
+                    <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                      <use href="/__spritemap#sprite-arrow"></use>
                     </svg>
                   </a>
-                  <ul class="nav__sub-list" data-accordion="content">
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#news" data-link="link-menu">Интервью</a>
-                    </li>
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#news" data-link="link-menu">Путешествия</a>
-                    </li>
-                    <li class="nav__sub__item">
-                      <a class="nav__sub__link" href="#news" data-link="link-menu">Карьера</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#contacts" data-link="link-menu">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <section class="hero">
-        <h1 class="visually-hidden">Проект "стажировка" - повышение квалификациимолодых специалистов</h1>
-        <div class="swiper" data-hero-slider="data-hero-slider">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <div class="hero__image-wrapper">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-1-mobile.webp 1x, img/content/hero/slide-1-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-1-tablet.webp 1x, img/content/hero/slide-1-tablet@2x.webp 2x">
-                  <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-1-desktop.webp 1x, img/content/hero/slide-1-desktop@2x.webp 2x">
-                  <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-1-mobile.png 1x, img/content/hero/slide-1-mobile@2x.png 2x">
-                  <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-1-tablet.png 1x, img/content/hero/slide-1-tablet@2x.png 2x">
-                  <img src="img/content/hero/slide-1-desktop.jpg" srcset="img/content/hero/slide-1-desktop@2.jpg 2x" width="1440" height="800" alt="Девушка в желтой блузке с красными папками.">
-                </picture>
-              </div>
-              <div class="hero__content container">
-                <div class="hero__pagination-wrapper">
-                  <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
-                  <img src="img/svg/angle.svg" alt="" width="20" height="20">
-                </div>
-                <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
-                <div class="hero__container">
-                  <div class="hero__text">
-                    <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;разных городах,&nbsp;ощущая настоящий студенческий стиль жизни!</p>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
-                  <div class="hero__button-wrapper">
-                    <a class="button" href="#">
-                      <span>Подробнее</span>
-                      <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </a>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
                 </div>
               </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="hero__image-wrapper">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.webp 1x, img/content/hero/slide-2-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-2-tablet.webp 1x, img/content/hero/slide-2-tablet@2x.webp 2x">
-                  <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-2-desktop.webp 1x, img/content/hero/slide-2-desktop@2x.webp 2x">
-                  <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.png 1x, img/content/hero/slide-2-mobile@2x.png 2x">
-                  <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-2-tablet.png 1x, img/content/hero/slide-2-tablet@2x.png 2x">
-                  <img src="img/content/hero/slide-2-desktop.jpg" srcset="img/content/hero/slide-2-desktop@2.jpg 2x" width="1440" height="800" alt="Люди улыбаются в камеру.">
-                </picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-3-mobile.webp 1x, img/content/hero/slide-3-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-3-tablet.webp 1x, img/content/hero/slide-3-tablet@2x.webp 2x">
+                <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-3-desktop.webp 1x, img/content/hero/slide-3-desktop@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.png 1x, img/content/hero/slide-2-mobile@2x.png 2x">
+                <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-3-tablet.png 1x, img/content/hero/slide-3-tablet@2x.png 2x">
+                <img src="img/content/hero/slide-3-desktop.jpg" srcset="img/content/hero/slide-3-desktop@2.jpg 2x" width="1440" height="800" alt="Люди общаются на совещании.">
+              </picture>
+            </div>
+            <div class="hero__content container">
+              <div class="hero__pagination-wrapper">
+                <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
+                <img src="img/svg/angle.svg" alt="" width="20" height="20">
               </div>
-              <div class="hero__content container">
-                <div class="hero__pagination-wrapper">
-                  <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
-                  <img src="img/svg/angle.svg" alt="" width="20" height="20">
+              <h2>Программы стажировок в крупнейших компаниях мира</h2>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <p>Получите незаменимый опыт работы в&nbsp;ведущих мировых компаниях и государственных организациях.</p>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
                 </div>
-                <h2>Волонтёрские программы - внесите свой вклад в общество</h2>
-                <div class="hero__container">
-                  <div class="hero__text">
-                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
-                  <div class="hero__button-wrapper">
-                    <a class="button" href="#">
-                      <span>Подробнее</span>
-                      <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </a>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="swiper-slide">
-              <div class="hero__image-wrapper">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-3-mobile.webp 1x, img/content/hero/slide-3-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-3-tablet.webp 1x, img/content/hero/slide-3-tablet@2x.webp 2x">
-                  <source type="image/webp" width="1440" height="800" srcset="img/content/hero/slide-3-desktop.webp 1x, img/content/hero/slide-3-desktop@2x.webp 2x">
-                  <source type="image/png" media="(max-width: 767px)" width="320" height="568" srcset="img/content/hero/slide-2-mobile.png 1x, img/content/hero/slide-2-mobile@2x.png 2x">
-                  <source type="image/png" media="(max-width: 1439px)" width="768" height="1024" srcset="img/content/hero/slide-3-tablet.png 1x, img/content/hero/slide-3-tablet@2x.png 2x">
-                  <img src="img/content/hero/slide-3-desktop.jpg" srcset="img/content/hero/slide-3-desktop@2.jpg 2x" width="1440" height="800" alt="Люди общаются на совещании.">
-                </picture>
-              </div>
-              <div class="hero__content container">
-                <div class="hero__pagination-wrapper">
-                  <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div>
-                  <img src="img/svg/angle.svg" alt="" width="20" height="20">
-                </div>
-                <h2>Программы стажировок в крупнейших компаниях мира</h2>
-                <div class="hero__container">
-                  <div class="hero__text">
-                    <p>Получите незаменимый опыт работы в&nbsp;ведущих мировых компаниях и государственных организациях.</p>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
-                  <div class="hero__button-wrapper">
-                    <a class="button" href="#">
-                      <span>Подробнее</span>
-                      <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </a>
-                    <img src="img/svg/angle.svg" alt="" width="26" height="26">
-                  </div>
+                <div class="hero__button-wrapper">
+                  <a class="button" href="#">
+                    <span>Подробнее</span>
+                    <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </a>
+                  <img src="img/svg/angle.svg" alt="" width="26" height="26">
                 </div>
               </div>
-            </li>
-          </ul>
-           <!-- <div class="hero__pagination swiper-pagination" data-hero-pagination="data-hero-pagination"></div> -->
-        </div>
-      </section>
-    </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <main>
       <div class="main-wrapper">
@@ -216,8 +216,8 @@
             <div class="about__text">
               <h3>Наша цель</h3>
               <p>
-                Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях
-              карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель
+                Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях
+              карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель
               центра &ndash;&nbsp; наделить этих людей способностью инициировать значимые изменения.
               </p>
               <div class="about__button-wrapper">
@@ -525,13 +525,13 @@
                       </svg>
                     </div>
                     <div class="news__text-title">
-                      <h3>Интервью<br> с участницей программы стажировки</h3>
+                      <h3><span>Интервью</span> с участницей программы стажировки</h3>
                       <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                         <use href="/__spritemap#sprite-angle"></use>
                       </svg>
                     </div>
                     <div class="news__text-content">
-                      <p>Саша рассказывает, <br>как попала<br> в программу<br> и как прошла 6-месячная стажировка в ISOFound</p>
+                      <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</p>
                       <a class="button button--arrow" href="#">
                         <span class="visually-hidden">Открыть новость.</span>
                         <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
@@ -790,129 +790,6 @@
                     </div>
                   </div>
                 </li>
-                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="travel">
-                  <div class="news__image-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-2-mobile.webp 1x, img/content/news/news-2-mobile@2x.webp 2x">
-                      <source type="image/webp" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-2-tablet.webp 1x, img/content/news/news-2-tablet@2x.webp 2x">
-                      <source type="image/webp" width="268" height="400" srcset="img/content/news/news-2-desktop.webp 1x, img/content/news/news-2-desktop@2x.webp 2x">
-                      <source type="image/png" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-2-mobile.png 1x, img/content/news/news-2-mobile@2x.png 2x">
-                      <source type="image/png" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-2-tablet.png 1x, img/content/news/news-2-tablet@2x.png 2x">
-                      <img src="img/content/news/news-2-desktop.jpg" srcset="img/content/news/news-2-desktop@2.jpg 2x" width="268" height="400" alt="Городской пляж у моря." loading="lazy">
-                    </picture>
-                  </div>
-                  <div class="news__text swiper__text">
-                    <div class="news__text-date">
-                      <time datetime="2023-03-20">20/03/2023</time>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-title">
-                      <h3>Путешествуем по миру</h3>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-content">
-                      <p>Какие места посещают наши студенты весной</p>
-                      <a class="button button--arrow" href="#">
-                        <span class="visually-hidden">Открыть новость.</span>
-                        <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                          <use href="/__spritemap#sprite-arrow"></use>
-                        </svg>
-                      </a>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </li> -->
-                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="volunteering">
-                  <div class="news__image-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-3-mobile.webp 1x, img/content/news/news-3-mobile@2x.webp 2x">
-                      <source type="image/webp" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-3-tablet.webp 1x, img/content/news/news-3-tablet@2x.webp 2x">
-                      <source type="image/webp" width="268" height="400" srcset="img/content/news/news-3-desktop.webp 1x, img/content/news/news-3-desktop@2x.webp 2x">
-                      <source type="image/png" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-3-mobile.png 1x, img/content/news/news-3-mobile@2x.png 2x">
-                      <source type="image/png" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-3-tablet.png 1x, img/content/news/news-3-tablet@2x.png 2x">
-                      <img src="img/content/news/news-3-desktop.jpg" srcset="img/content/news/news-3-desktop@2.jpg 2x" width="268" height="400" alt="Улыбающаяся девушка со значком волонтёра." loading="lazy">
-                    </picture>
-                  </div>
-                  <div class="news__text swiper__text">
-                    <div class="news__text-date">
-                      <time datetime="2023-03-17">17/03/2023</time>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-title">
-                      <h3>Новая программа волонтёрства</h3>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-content">
-                      <p>Программа помощи детям длительностью 4 месяца</p>
-                      <a class="button button--arrow" href="#">
-                        <span class="visually-hidden">Открыть новость.</span>
-                        <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                          <use href="/__spritemap#sprite-arrow"></use>
-                        </svg>
-                      </a>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </li> -->
-                <!-- <li class="news__item swiper-slide" data-tabs-el="news-el" data-filter="career">
-                  <div class="news__image-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-4-mobile.webp 1x, img/content/news/news-4-mobile@2x.webp 2x">
-                      <source type="image/webp" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-4-tablet.webp 1x, img/content/news/news-4-tablet@2x.webp 2x">
-                      <source type="image/webp" width="268" height="400" srcset="img/content/news/news-4-desktop.webp 1x, img/content/news/news-4-desktop@2x.webp 2x">
-                      <source type="image/png" media="(max-width: 767px)" width="290" height="240" srcset="img/content/news/news-4-mobile.png 1x, img/content/news/news-4-mobile@2x.png 2x">
-                      <source type="image/png" media="(max-width: 1439px)" width="324" height="350" srcset="img/content/news/news-4-tablet.png 1x, img/content/news/news-4-tablet@2x.png 2x">
-                      <img src="img/content/news/news-4-desktop.jpg" srcset="img/content/news/news-4-desktop@2.jpg 2x" width="268" height="400" alt="Улыбающаяся девушка со значком волонтёра." loading="lazy">
-                    </picture>
-                  </div>
-                  <div class="news__text swiper__text">
-                    <div class="news__text-date">
-                      <time datetime="2023-03-10">10/03/2023</time>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-title">
-                      <h3>Построй свою карьеру</h3>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                    <div class="news__text-content">
-                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                      <a class="button button--arrow" href="#">
-                        <span class="visually-hidden">Открыть новость.</span>
-                        <svg role="img" width="8" height="8" aria-hidden="true" focusable="false">
-                          <use href="/__spritemap#sprite-arrow"></use>
-                        </svg>
-                      </a>
-                      <svg role="img" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-angle"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </li> -->
               </ul>
               <div class="news__controls">
                 <button class="swiper__button swiper__button--prev " type="button" data-news-prev="data-news-prev">
@@ -1212,11 +1089,11 @@
                 <div class="custom-toggle" data-validate-type="checkbox" data-required="data-required">
                   <label>
                     <input type="checkbox" name="confirmation" value="agree" aria-label="Согласие на обработку персональных данных." required>
-                    <div></div>
+                    <span></span>
                     <svg role="img" width="8" height="10" aria-hidden="true" focusable="false">
                       <use href="/__spritemap#sprite-check"></use>
                     </svg>
-                    <span>Я согласен на обработку моих персональных данных</span>
+                    Я согласен на обработку моих персональных данных
                   </label>
                 </div>
                 <button class="button button--dark" type="submit">
@@ -1242,11 +1119,12 @@
       </div>
     </main>
 
-
     <footer class="footer" data-test="footer">
       <div class="footer__container container">
-        <a class="footer__logo" href="#">
-          <img src="img/svg/logotype.svg" width="52" height="52" alt="Логотип Internship programs.">
+        <a class="logo" href="#" aria-label="Логотип проекта Стажировка" aria-current="page">
+          <svg role="img" width="30" height="30"  aria-hidden="true">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
         </a>
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
@@ -1270,7 +1148,7 @@
         </ul>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">
+            <a class="footer__social-link" href="#" rel="noopener noreferrer" target="_blank">
               <span class="visually-hidden">Мы в Вконтакте.</span>
               <svg width="16" height="16">
                 <use href="/__spritemap#sprite-vk"></use>
@@ -1278,7 +1156,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">
+            <a class="footer__social-link" href="#" rel="noopener noreferrer" target="_blank">
               <span class="visually-hidden">Мы в Одноклассники.</span>
               <svg width="16" height="16">
                 <use href="/__spritemap#sprite-ok"></use>
@@ -1286,7 +1164,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">
+            <a class="footer__social-link" href="#" rel="noopener noreferrer" target="_blank">
               <span class="visually-hidden">Мы в Reddit.</span>
               <svg width="16" height="16">
                 <use href="/__spritemap#sprite-reddit"></use>
@@ -1304,9 +1182,9 @@
 
   <div class="modal modal--preload" data-modal="about">
     <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__overlay" data-close-modal="data-close-modal"></div>
       <div class="modal__content">
-        <button class="modal__close-btn" type="button" data-close-modal>
+        <button class="modal__close-btn" type="button" data-close-modal="data-close-modal">
           <svg role="img" width="20" height="20" aria-hidden="true" focusable="false">
             <use href="/__spritemap#sprite-cross"></use>
           </svg>
@@ -1324,17 +1202,17 @@
               <label for="phone">Телефон</label>
               <input type="tel" name="phone" id="phone" autocomplete="off" required>
             </div>
-            <div class="custom-select custom-select--light" data-select="data-select" data-validate-type="select" data-name="city" data-id="city" data-required="data-required">
+            <div class="custom-select custom-select--light" data-select="data-select" data-validate-type="select" data-name="city" data-required="data-required">
               <span class="custom-select__label">Выберите город</span>
               <button class="custom-select__button custom-select__button--light" type="button" aria-label="Выберите одну из опций">
                 <span class="custom-select__text"></span>
-                <span class="custom-select__icon custom-select__icon">
+                <span class="custom-select__icon">
                   <svg role="img" width="16" height="16" aria-hidden="true" focusable="false">
                     <use href="/__spritemap#sprite-arrow-down"></use>
                   </svg>
                 </span>
               </button>
-              <ul class="custom-select__list" role="listbox">
+              <ul class="custom-select__list">
                 <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
                 <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
                 <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Екатеринбург</li>
@@ -1344,11 +1222,11 @@
             <div class="custom-toggle custom-toggle--light" data-validate-type="checkbox" data-required="data-required">
               <label>
                 <input type="checkbox" name="confirmation" value="agree" aria-label="Согласие на обработку персональных данных." required>
-                <div></div>
+                <span></span>
                 <svg role="img" width="8" height="10" aria-hidden="true" focusable="false">
                   <use href="/__spritemap#sprite-check"></use>
                 </svg>
-                <span>Я согласен на обработку моих персональных данных</span>
+                Я согласен на обработку моих персональных данных
               </label>
             </div>
             <button class="modal__button button" type="submit">

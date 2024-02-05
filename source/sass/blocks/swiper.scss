@@ -6,6 +6,16 @@
   bottom: 0;
 }
 
+// .swiper-horizontal >
+// .swiper-pagination-bullets .swiper-pagination-bullet,
+// .swiper-pagination-horizontal.swiper-pagination-bullets
+// .swiper-pagination-bullet {
+//   @include vp-767 {
+//     margin: 0 8px 0 4px;
+//   }
+// }
+
+
 .swiper-slide-active .hero__content {
   visibility: visible;
 }
@@ -14,7 +24,7 @@
   background-color: transparent;
   border: 1px solid $color-cerulean-blue;
   opacity: 1;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .swiper .swiper-pagination-bullet-active {
@@ -70,6 +80,8 @@
   height: 22px;
   align-items: center;
   display: flex;
+  background-color: transparent;
+  border-radius: 50%;
 
   svg {
     stroke-width: 2px;
@@ -90,38 +102,39 @@
   &:focus,
   &:focus-visible {
     background-color: $color-default-white;
-    border-radius: 50%;
-    outline: none;
+    // border-radius: 50%;
+    // outline: none;
   }
 
   &:active {
     background-color: $color-default-white;
-    border-radius: 50%;
+    // border-radius: 50%;
 
     svg {
       opacity: 0.7;
     }
   }
+}
 
-  &:disabled,
-  &--disabled {
+.swiper-button-disabled {
+  svg {
     color: $color-mischka;
   }
 }
 
-.swiper-horizontal >
-.swiper-scrollbar,
+.swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   top: 0;
   width: calc(100% - 106px);
+  height: 2px;
 
   @include vp-1439 {
     width: calc(100% - 118px);
   }
 }
 
-.swiper-grid>.swiper-wrapper {
+.swiper-grid > .swiper-wrapper {
   flex-wrap: wrap;
 }

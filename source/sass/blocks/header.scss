@@ -42,7 +42,11 @@
   }
 }
 
-.header_hidden {
+.header__container .logo {
+  margin-top: 1px;
+}
+
+.header.is-hidden {
   transform: translateY(-100%);
 }
 

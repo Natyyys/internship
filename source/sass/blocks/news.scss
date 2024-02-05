@@ -65,7 +65,6 @@
 
   @include vp-767 {
     flex-wrap: nowrap;
-    width: 100%;
     overflow-x: auto;
     gap: 11px;
     padding: 0;
@@ -131,14 +130,10 @@
   @include vp-1439 {
     height: 730px;
     margin-bottom: 30px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 30px 0;
   }
 
   @include vp-767 {
     height: 590px;
-    gap: 20px 0;
     margin-bottom: 24px;
   }
 }
@@ -149,13 +144,21 @@
 
   @include vp-1439 {
     height: 350px;
-    min-width: 324px;
-    width: calc(324 / 678 * 100%);
+    width: 324px;
   }
 
   @include vp-767 {
-    min-width: 100%;
-    height: 330px;
+    width: 290px;
+    max-height: 330px;
+    min-height: 330px;
+  }
+
+  &:nth-child(2n) {
+    @include vp-767 {
+      width: 290px;
+      max-height: 240px;
+      min-height: 240px;
+    }
   }
 }
 
@@ -171,11 +174,11 @@
   width: 79px;
 
   @include vp-1439 {
-    width: 78;
+    width: fit-content;
   }
 
   time {
-    border-radius: 0px 12px 0px 0px;
+    border-radius: 0 12px 0 0;
     padding: 7px 12px 6px 0;
   }
 
@@ -184,7 +187,7 @@
     transform: rotate(-90deg);
     color: $color-alabaster;
     bottom: 0;
-    right: -16x;
+    right: -15px;
   }
 
   svg + svg {
@@ -201,17 +204,17 @@
   position: relative;
 
   @include vp-1439 {
-    width: calc(207 / 324 * 100%);
+    width: 207px;
   }
 
   @include vp-767 {
-    width: calc(221 / 320 * 100%);
+    width: 200px;
   }
 
   h3 {
     background: $color-alabaster;
     padding: 5px 18px 0 0;
-    border-radius: 0px 12px 0px 0px;
+    border-radius: 0 12px 0 0;
 
     @include vp-1439 {
       padding: 5px 18px 1px 0;
@@ -219,10 +222,6 @@
 
     @include vp-767 {
       padding: 10px 18px 4px 0;
-
-      br {
-        display: none;
-      }
     }
   }
 
@@ -235,6 +234,17 @@
   }
 }
 
+.news__text-title span {
+  @include vp-1439 {
+    display: block;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
 .news__text-content {
   display: flex;
   flex-direction: row;
@@ -242,16 +252,16 @@
   width: 240px;
   padding: 9px 18px 12px 0;
   gap: 0 16px;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   position: relative;
 
   @include vp-1439 {
-    width: calc(240 / 324 * 100%);
+    width: 240px;
     padding: 7px 18px 10px 0;
   }
 
   @include vp-767 {
-    width: calc(263 / 290 * 100%);
+    width: 263px;
     padding: 12px 10px 10px 0;
   }
 
@@ -280,33 +290,17 @@
 
 
 .news__item:first-child {
-  @include vp-1440  {
+  @include vp-1440 {
     width: 604px;
-
-    br {
-      display: none;
-    }
-
-    br + br {
-      display: block;
-    }
-
-    .news__text-date {
-      width: 78px;
-    }
 
     .news__text-title {
       width: 291px;
-
-      br {
-        display: none;
-      }
     }
 
     h3 {
       background: $color-alabaster;
       padding: 13px 18px 2px 0;
-      border-radius: 0px 12px 0px 0px;
+      border-radius: 0 12px 0 0;
     }
 
     .news__text-content {
@@ -314,23 +308,14 @@
     }
   }
 
+
   @include vp-767 {
     .news__text-content {
       padding: 11px 10px 9px 0;
     }
 
     p {
-      br {
-        display: none;
-      }
-
-      br + br {
-        display: block;
-      }
-
-      br + br + br {
-        display: none;
-      }
+      padding-right: 16px;
     }
   }
 }
@@ -340,6 +325,12 @@
     .news__text-title {
       h3 {
         padding-right: 10px;
+      }
+    }
+
+    .news__text-date {
+      svg {
+        right: -12px;
       }
     }
   }
@@ -363,28 +354,17 @@
   }
 }
 
-.news__item:nth-child(even) {
-  @include vp-767 {
-    height: 240px;
-  }
-}
-
-.news__item:nth-child(even) ~ .news__item:last-child {
-  @include vp-767 {
-    margin-bottom: auto;
-  }
-}
-
 .news__item.fade {
   animation-name: fade;
   animation-duration: 3s;
 }
 
 @keyframes fade {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+
+  to {
     opacity: 1;
   }
 }

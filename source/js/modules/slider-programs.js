@@ -16,15 +16,13 @@ const initProgramsSlider = () => {
     scrollbar: {
       el: scrollbar,
     },
-
     breakpoints: {
-      320: {
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-        allowTouchMove: true,
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        allowTouchMove: false,
         scrollbar: {
-          el: '',
-          enabled: false,
+          dragSize: '392',
         },
       },
       768: {
@@ -35,12 +33,13 @@ const initProgramsSlider = () => {
           dragSize: '324',
         },
       },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 32,
-        allowTouchMove: false,
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        allowTouchMove: true,
         scrollbar: {
-          dragSize: '392',
+          el: '',
+          enabled: false,
         },
       },
     },

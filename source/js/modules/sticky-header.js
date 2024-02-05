@@ -1,29 +1,29 @@
-function onScrollHeader() {
-  const header = document.querySelector('[data-header="data-header"]'); // находим header и записываем в константу
+const HIDDEN_CLASS = 'is-hidden';
 
-  let prevScroll = window.scrollY; // узнаем на сколько была прокручена страница ранее
-  let currentScroll; // на сколько прокручена страница сейчас (пока нет значения)
+function onScrollHeader() {
+  const header = document.querySelector('[data-header="data-header"]');
+
+  let prevScroll = window.scrollY;
+  let currentScroll;
 
   window.addEventListener('scroll', () => {
 
-    currentScroll = window.scrollY; // узнаем на сколько прокрутили страницу
+    currentScroll = window.scrollY;
 
-    const headerHidden = () => header.classList.contains('header_hidden'); // узнаем скрыт header или нет
+    const headerHidden = () => header.classList.contains(HIDDEN_CLASS);
 
-    if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
-      header.classList.add('header_hidden'); // то скрываем header
+    if (currentScroll > prevScroll && !headerHidden()) {
+      header.classList.add(HIDDEN_CLASS);
     }
-    if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
-      setTimeout(() => {
-        header.classList.remove('header_hidden'); // то отображаем header
-      }, 300);
+    if (currentScroll < prevScroll && headerHidden()) {
+      // setTimeout(() => {
+      header.classList.remove(HIDDEN_CLASS);
+      // }, 300);
     }
 
-    prevScroll = currentScroll; // записываем на сколько прокручена страница на данный момент
+    prevScroll = currentScroll;
 
   });
 }
 
 export {onScrollHeader};
-
-

@@ -52,7 +52,7 @@
     line-height: 14px;
     color: $color-alabaster;
     opacity: 0.8;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
     margin-bottom: 2px;
 
     @include vp-1439 {
@@ -79,7 +79,7 @@
     border-radius: 8px;
     outline: none;
     cursor: pointer;
-    transition: border .3s ease;
+    transition: border 0.3s ease;
   }
 
   &__text {

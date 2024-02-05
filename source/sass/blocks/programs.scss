@@ -24,19 +24,22 @@
   }
 }
 
-.programs__heading-wrapper{
+.programs__heading-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 46px;
 
   @include vp-1439 {
     padding-right: 45px;
     padding-left: 45px;
+    margin-bottom: 40px;
   }
 
   @include vp-767 {
     padding: 0;
-    padding-right: 15px;
+    padding-right: 75px;
+    margin-bottom: 32px;
   }
 
   h2 {
@@ -47,9 +50,7 @@
     }
 
     @include vp-767 {
-      position: absolute;
-      top: 2px;
-      left: 15px;
+      padding-top: 3px;
     }
   }
 
@@ -83,6 +84,7 @@
   @include vp-767 {
     width: 100%;
     margin: 0 auto;
+    position: static;
   }
 
   ul {
@@ -91,15 +93,9 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    margin-top: 46px;
-    margin-bottom: 40px;
-
-    @include vp-1439 {
-      margin-top: 40px;
-    }
+    margin-bottom: 39px;
 
     @include vp-767 {
-      margin-top: 55px;
       margin-bottom: 72px;
     }
   }
@@ -112,7 +108,7 @@
     }
 
     @include vp-767 {
-      width:290px;
+      width: 290px;
     }
   }
 }
@@ -168,15 +164,15 @@
   }
 
   h3 {
-    padding: 13px 18px 2px 18px;
-    border-radius: 12px 12px 0px 0px;
+    padding: 13px 18px 2px;
+    border-radius: 12px 12px 0 0;
 
     @include vp-1439 {
-      padding: 13px 18px 1px 18px;
+      padding: 13px 18px 1px;
     }
 
     @include vp-767 {
-      padding: 18px 18px 6px 18px;
+      padding: 18px 18px 6px;
     }
   }
 
@@ -196,7 +192,7 @@
   align-items: center;
   padding: 11px 18px 14px;
   gap: 16px;
-  border-radius: 0px 12px 12px 12px;
+  border-radius: 0 12px 12px;
 
   @include vp-1439 {
     min-height: 50px;
@@ -221,16 +217,21 @@
   flex-direction: row;
   gap: 52px;
   align-items: center;
+  margin-bottom: 1px;
 
   @include vp-1439 {
     gap: 64px;
     width: calc(100% - 45px);
   }
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
 }
 
 .programs__scrollbar {
   width: 100%;
-  height: 1px;
+
   margin: auto 0;
   background-color: $color-cerulean-blue-20;
 
@@ -250,6 +251,6 @@
   @include vp-767 {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
   }
 }
