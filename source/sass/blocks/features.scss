@@ -2,153 +2,53 @@
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   border-radius: 20px;
+}
 
-  ul {
-    margin: 0;
-    list-style: none;
-    padding: 52px 106px 32px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 34px 32px;
+.features__list {
+  margin: 0;
+  list-style: none;
+  padding: 52px 106px 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px 32px;
 
-    @include vp-1439 {
-      padding: 42px 40px 40px;
-      gap: 22px 30px;
-    }
-
-    @include vp-767 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: 22px 20px 40px 10px;
-      gap: 2px;
-    }
+  @include vp-1439 {
+    padding: 42px 40px 40px;
+    gap: 22px 30px;
   }
 
-  li {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 25px 59px;
-    // display: flex;
-    // flex-direction: row;
-    gap: 26px;
-    border: 1px solid $color-alabaster;
-    border-radius: 16px;
-    margin-top: 20px;
-    margin-left: 20px;
-    position: relative;
-    min-height: 132px;
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 22px 20px 40px 10px;
+    gap: 2px;
+  }
+}
 
-    @include vp-1439 {
-      display: flex;
-      flex-direction: column;
-      padding: 26px 29px 25px;
-      min-height: auto;
-      gap: 7px;
-    }
+.features__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 25px 59px;
+  gap: 26px;
+  border: 1px solid $color-alabaster;
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  min-height: 132px;
 
-    @include vp-767 {
-      padding: 15px 19px 23px;
-      gap: 4px;
-    }
+  @include vp-1439 {
+    display: flex;
+    flex-direction: column;
+    padding: 26px 29px 25px;
+    min-height: auto;
+    gap: 7px;
+  }
 
-    &:first-child {
-      gap: 9px;
-
-      @include vp-1439 {
-        gap: 7px;
-      }
-
-      @include vp-767 {
-        gap: 4px;
-      }
-    }
-
-    &:first-child + li {
-      h4 {
-        br {
-          display: none;
-        }
-      }
-
-      @include vp-1439 {
-        br {
-          display: none;
-        }
-      }
-
-      @include vp-767 {
-        h4 {
-          br {
-            display: block;
-          }
-        }
-      }
-
-      // @include vp-767 {
-      //   p {
-      //     padding-right: 16px;
-      //   }
-      // }
-    }
-
-    &:nth-child(3n+3) {
-      // padding: 25px 53px;
-
-      @include vp-1439 {
-        padding: 26px 29px 25px;
-      }
-
-      @include vp-767 {
-        padding: 15px 19px 23px;
-
-        p {
-          padding-right: 22px;
-        }
-      }
-    }
-
-    &:nth-child(even) {
-      @include vp-1439 {
-        padding-right: 5px;
-      }
-
-      @include vp-767 {
-        padding-right: 20px;
-
-        br {
-          display: none;
-        }
-      }
-    }
-
-    &:last-child {
-      gap: 45px;
-
-      @include vp-1439 {
-        gap: 7px;
-
-        br {
-          display: inline;
-        }
-      }
-
-      @include vp-767 {
-        gap: 4px;
-
-        br {
-          display: none;
-        }
-      }
-
-      p {
-        padding-left: 8px;
-
-        @include vp-1439 {
-          padding-left: 0;
-        }
-      }
-    }
+  @include vp-767 {
+    padding: 15px 19px 23px;
+    gap: 4px;
   }
 
   h4 {
@@ -207,5 +107,75 @@
       top: -22px;
       left: -17px;
     }
+  }
+}
+
+.features__item:first-child {
+  gap: 9px;
+
+  @include vp-1439 {
+    gap: 7px;
+  }
+
+  @include vp-767 {
+    gap: 4px;
+  }
+}
+
+.features__item:nth-child(4n + 2) br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.features__item:nth-child(3n) {
+  @include vp-1439 {
+    padding: 26px 29px 25px;
+  }
+
+  @include vp-767 {
+    padding: 15px 19px 23px;
+
+    p {
+      padding-right: 22px;
+    }
+  }
+}
+
+.features__item:nth-child(even) {
+  @include vp-1439 {
+    padding-right: 5px;
+  }
+
+  @include vp-767 {
+    padding-right: 20px;
+  }
+}
+
+.features__item:last-child {
+  gap: 45px;
+
+  @include vp-1439 {
+    gap: 7px;
+  }
+
+  @include vp-767 {
+    gap: 4px;
+  }
+
+  p {
+    padding-left: 8px;
+
+    @include vp-1439 {
+      padding-left: 0;
+    }
+  }
+}
+
+.features__item:last-child br {
+  @include vp-767 {
+    display: none;
   }
 }

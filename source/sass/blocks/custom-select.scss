@@ -186,7 +186,7 @@
     .custom-select__label {
       color: $color-charcoal;
       margin-top: 2px;
-      margin-bottom: 0;
+      margin-bottom: 2;
 
       @include vp-767 {
         font-size: 14px;

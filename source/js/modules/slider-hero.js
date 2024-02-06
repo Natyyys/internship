@@ -1,14 +1,17 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper';
+import { Autoplay, Pagination, EffectFade, Keyboard } from 'swiper/modules';
 
 const heroSlider = document.querySelector('[data-hero-slider]');
 
 const initHeroSlider = () => {
   const swiper = new Swiper(heroSlider, {
+    modules: [Autoplay, Pagination, EffectFade, Keyboard],
     loop: true,
+    keyboard: true,
     autoHeight: true,
     speed: 1500,
     effect: 'fade',
-    autoplay: true,
+    // autoplay: true,
     breakpoints: {
       1440: {
         allowTouchMove: false,

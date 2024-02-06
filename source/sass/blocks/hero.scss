@@ -1,9 +1,7 @@
-.hero {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.hero ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hero__image-wrapper {
@@ -38,52 +36,38 @@
     min-height: 568px;
     padding-bottom: 20px;
   }
+}
 
-  h2 {
-    margin: 0;
-    background-color: $color-default-white;
-    font-weight: 400;
-    font-size: 54px;
-    line-height: 62px;
-    color: $color-cerulean-blue;
-    padding: 40px 50px 30px;
-    max-width: 968px;
-    border-radius: 0 30px 30px 0;
+.hero__content h2 {
+  margin: 0;
+  background-color: $color-default-white;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 62px;
+  color: $color-cerulean-blue;
+  padding: 40px 50px 30px;
+  max-width: 968px;
+  border-radius: 0 30px 30px 0;
 
-    @include vp-1439 {
-      font-size: 36px;
-      line-height: 44px;
-      padding: 31px 40px 23px;
-      max-width: 659px;
-    }
+  @include vp-1439 {
+    font-size: 36px;
+    line-height: 44px;
+    padding: 31px 40px 23px;
+    max-width: 659px;
+  }
 
-    @include vp-767 {
-      font-size: 22px;
-      line-height: 26px;
-      padding: 20px 14px 16px;
-      max-width: 100%;
-      border-radius: 0 16px 16px 0;
-    }
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 20px 14px 16px;
+    max-width: 100%;
+    border-radius: 0 16px 16px 0;
   }
 }
 
 .hero__pagination-wrapper {
-  position: relative;
   width: fit-content;
-
-  img {
-    position: absolute;
-    transform: rotate(-90deg);
-    bottom: 0;
-    right: -20px;
-    fill: $color-default-white;
-
-    @include vp-767 {
-      width: 10px;
-      height: 10px;
-      right: -10px;
-    }
-  }
+  display: flex;
 }
 
 .hero__pagination {
@@ -131,8 +115,6 @@
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid transparent;
-
-    // opacity: 0.8;
   }
 }
 
@@ -149,7 +131,6 @@
   max-width: 772px;
   padding: 0 50px 28px;
   border-radius: 0 0 30px 30px;
-  position: relative;
 
   @include vp-1439 {
     padding: 0 40px 35px;
@@ -164,23 +145,6 @@
     background-color: transparent;
     margin-top: -5px;
   }
-
-  p {
-    margin: 0;
-    margin-top: -7px;
-
-    @include vp-1439 {
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: -4px;
-      padding-right: 20px;
-    }
-
-    @include vp-767 {
-      font-size: 14px;
-      margin-top: 0;
-    }
-  }
 }
 
 .hero__text {
@@ -188,27 +152,30 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 15px 0;
-
-  // padding: 0 14px 10px;
   border-radius: 0 0 14px;
   width: 92%;
   background-color: $color-default-white;
 
   @include vp-767 {
     padding: 0 14px 10px;
+    position: relative;
+  }
+}
+
+.hero__text p {
+  margin: 0;
+  margin-top: -7px;
+
+  @include vp-1439 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -4px;
+    padding-right: 20px;
   }
 
-  img {
-    position: absolute;
-    top: 0;
-    right: -26px;
-
-    @include vp-767 {
-      width: 10px;
-      height: 10px;
-      right: calc(8% - 10px);
-      top: 5px;
-    }
+  @include vp-767 {
+    font-size: 14px;
+    margin-top: 0;
   }
 }
 
@@ -218,29 +185,68 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 15px 0;
+  position: relative;
 
   @include vp-1439 {
     padding-top: 0;
   }
 
   @include vp-767 {
-    position: relative;
     padding: 10px 15px;
     max-width: 182px;
     border-radius: 0 0 14px 14px;
     background-color: $color-default-white;
   }
+}
 
-  img {
+.hero__angle {
+  color: $color-default-white;
+  display: flex;
+  margin-top: auto;
+
+  @include vp-767 {
+    width: 10px;
+    height: 10px;
+  }
+
+  &--top {
+    rotate: -90deg;
+  }
+
+  &--middle {
     display: none;
 
     @include vp-767 {
       display: block;
       position: absolute;
+      right: -10px;
+      top: -4px;
+    }
+  }
+
+  &--bottom {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 0;
+    right: -76px;
+
+    @include vp-1439 {
+      right: -66px;
+    }
+
+    @include vp-767 {
       width: 10px;
       height: 10px;
       right: -10px;
       top: 0;
     }
+  }
+}
+
+.hero__angle svg {
+  @include vp-767 {
+    width: 10px;
+    height: 10px;
   }
 }

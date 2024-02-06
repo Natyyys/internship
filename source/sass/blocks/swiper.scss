@@ -36,6 +36,7 @@
     font-size: 24px;
     line-height: 26px;
     color: $color-cerulean-blue;
+
     // background-color: $color-default-white;
 
     @include vp-1439 {
@@ -102,12 +103,14 @@
   &:focus,
   &:focus-visible {
     background-color: $color-default-white;
+
     // border-radius: 50%;
     // outline: none;
   }
 
   &:active {
     background-color: $color-default-white;
+
     // border-radius: 50%;
 
     svg {

@@ -4,10 +4,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   background-color: $color-default-white;
-  width: 134px;
-  height: 54px;
-  padding: 0 3px 0 6px;
+  min-width: 134px;
+  max-width: 286px;
+  min-height: 54px;
+  padding: 0 49px 0 6px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 28px;
   outline: none;
@@ -25,6 +27,7 @@
     }
 
     svg {
+      right: 3px;
       color: $color-cerulean-blue;
       background-color: $color-default-white;
       outline: none;
@@ -55,7 +58,7 @@
 
     svg {
       background-color: $color-mischka;
-      color: rgba($color-mischka, 0.6);
+      color: $color-mischka-60;
     }
   }
 
@@ -67,10 +70,17 @@
     text-transform: uppercase;
     color: $color-cerulean-blue;
     padding: 13px;
+
+    // width: 75%;
+
+    // @include vp-1439 {
+    //   width: 56%;
+    // }
   }
 
   svg {
-    display: block;
+    position: absolute;
+    right: 3px;
     height: 46px;
     width: 46px;
     color: $color-default-white;
@@ -90,6 +100,7 @@
 
   span {
     color: $color-default-white;
+    text-align: start;
   }
 
   svg {
@@ -109,9 +120,7 @@
   }
 
   @include vp-767 {
-    left: 15px;
     min-width: 100%;
-    right: 0;
   }
 
   &:hover,
@@ -158,7 +167,7 @@
 
     svg {
       background-color: $color-mischka;
-      color: $color-mischka-50;
+      color: $color-mischka-60;
     }
   }
 }

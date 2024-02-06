@@ -12,8 +12,10 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {

@@ -131,65 +131,61 @@
       gap: 15px 0;
     }
   }
+}
 
-  li {
-    padding: 22px 60px 22px 24px;
-    border: 1px solid $color-default-white;
-    border-radius: 16px;
-    margin-left: 20px;
-    position: relative;
-    counter-increment: number 1;
+.grant__item {
+  padding: 22px 60px 22px 24px;
+  border: 1px solid $color-default-white;
+  border-radius: 16px;
+  margin-left: 20px;
+  position: relative;
+  counter-increment: number 1;
 
-    @include vp-1439 {
-      line-height: 20px;
-      padding: 25px 24px;
-      width: calc(305 / 678 * 100%);
-    }
+  @include vp-1439 {
+    line-height: 20px;
+    padding: 25px 24px;
+    width: calc(305 / 678 * 100%);
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    padding: 18px 24px;
+    margin-left: 15px;
+    width: calc(275 / 290 * 100%);
+  }
+
+  &::before {
+    width: 42px;
+    height: 42px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: -16px;
+    left: -21px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.22px;
+    text-transform: uppercase;
+    content: counter(number);
 
     @include vp-767 {
-      font-size: 14px;
-      padding: 18px 24px;
-      margin-left: 15px;
-      width: calc(275 / 290 * 100%);
+      font-size: 18px;
+      padding: 10px 4px;
+      width: 30px;
+      height: 36px;
+      top: -10px;
+      left: -15px;
     }
+  }
+}
 
-    &:last-child {
-      br {
-        display: none;
-      }
+.grant__item:last-child br {
+  display: none;
 
-      @include vp-1439 {
-        br {
-          display: block;
-        }
-      }
-    }
-
-    &::before {
-      width: 42px;
-      height: 42px;
-      background-color: $color-cerulean-blue;
-      border-radius: 50%;
-      padding: 10px;
-      text-align: center;
-      position: absolute;
-      top: -16px;
-      left: -21px;
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 500;
-      letter-spacing: 0.22px;
-      text-transform: uppercase;
-      content: counter(number);
-
-      @include vp-767 {
-        font-size: 18px;
-        padding: 10px 4px;
-        width: 30px;
-        height: 36px;
-        top: -10px;
-        left: -15px;
-      }
-    }
+  @include vp-1439 {
+    display: block;
   }
 }

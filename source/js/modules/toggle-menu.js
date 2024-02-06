@@ -21,7 +21,7 @@ const addToggleMenu = () => {
     nav.addEventListener('click', onLinkClick);
     document.addEventListener('click', isMenu);
     window.scrollLock.disableScrolling();
-    window.focusLock.lock('[data-container="header-wrapper"]', false);
+    window.focusLock.lock('[data-menu="data-menu"]', false);
     document.addEventListener('click', onDocumentOutside);
   }
 

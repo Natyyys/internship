@@ -3,7 +3,6 @@
   display: block;
   width: 286px;
   padding: 35px 25px;
-  overflow-y: auto;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
   transform: translate(48%, -49%) scale(0);
@@ -14,9 +13,6 @@
 .nav.is-opened {
   transform: translate(0, 0) scale(1);
   visibility: visible;
-  position: absolute;
-  right: 100px;
-  top: 58px;
 
   @include vp-1439 {
     right: 45px;
@@ -36,7 +32,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  height: auto;
 }
 
 .nav__link,
@@ -61,13 +56,22 @@
 }
 
 .nav__list {
+  height: auto;
+  max-height: 42vw;
+  overflow-y: auto;
   gap: 28px 0;
+
+  @include vp-767 {
+    max-height: 190vw;
+  }
 }
 
 .nav__link {
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 0.32px;
+  width: 100%;
+  display: inline-block;
 
   &--current {
     opacity: 1;
@@ -76,14 +80,14 @@
   &--button {
     position: relative;
     padding-right: 23px;
-
-    svg {
-      position: absolute;
-      top: 5px;
-      right: 0;
-      transition: transform $trans-default;
-    }
   }
+}
+
+.nav__link svg {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  transition: transform $trans-default;
 }
 
 .nav__item.is-active {

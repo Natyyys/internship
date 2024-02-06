@@ -5,7 +5,7 @@ import {initAccordions} from './vendor/accordion/init-accordion';
 import {initHeroSlider} from './modules/slider-hero';
 import {onScrollHeader} from './modules/sticky-header';
 import {initModals} from './vendor/modals/init-modals';
-import {initProgramsSlider} from './modules/slider-programs';;
+import {initProgramsSlider} from './modules/slider-programs';
 import {initNewsSlider} from './modules/tabs-news';
 import {initReviewsSlider} from './modules/slider-reviews';
 
