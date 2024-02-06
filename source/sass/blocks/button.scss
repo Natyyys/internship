@@ -63,6 +63,7 @@
       background-color: $color-default-white;
       color: $color-cerulean-blue;
       transform: rotate(45deg);
+      transition: transform $trans-default;
     }
   }
 
@@ -79,11 +80,11 @@
       background-color: $color-default-white;
       color: $color-cerulean-blue-70;
       transform: rotate(45deg);
+      transition: transform $trans-default;
     }
   }
 
-  &:disabled,
-  &--disabled {
+  &:disabled {
     background-color: $color-default-white;
     border: 1px solid $color-mischka;
     outline: none;
@@ -97,86 +98,86 @@
       color: $color-default-white;
     }
   }
+}
 
-  &--arrow {
-    border: none;
-    min-width: min-content;
-    padding: 0;
+.button--arrow {
+  border: none;
+  min-width: min-content;
+  padding: 0;
 
-    svg {
-      width: 30px;
-      height: 30px;
-      padding: 0 10px;
-    }
+  svg {
+    width: 30px;
+    height: 30px;
+    padding: 0 10px;
+  }
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      background-color: $color-default-white;
-    }
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $color-default-white;
+  }
 
-    &:active {
-      background-color: $color-default-white;
+  &:active {
+    background-color: $color-default-white;
+  }
+}
+
+.button--dark {
+  border: 1px solid $color-default-white;
+  width: 100%;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    gap: 0 31px;
+  }
+
+  @include vp-767 {
+    justify-content: flex-end;
+    gap: 0 19px;
+  }
+
+  span {
+    width: 100%;
+    color: $color-default-white;
+  }
+
+  svg {
+    background-color: $color-default-white;
+    color: $color-cerulean-blue;
+    width: 48px;
+
+    @include vp-767 {
+      width: 37px;
     }
   }
 
-  &--dark {
-    border: 1px solid $color-default-white;
-    width: 100%;
-    justify-content: space-between;
-
-    @include vp-1439 {
-      gap: 0 31px;
-    }
-
-    @include vp-767 {
-      justify-content: flex-end;
-      gap: 0 19px;
-    }
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $color-default-white;
 
     span {
-      width: 100%;
-      color: $color-default-white;
+      color: $color-cerulean-blue;
     }
 
     svg {
-      background-color: $color-default-white;
+      background-color: $color-cerulean-blue;
+      color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    outline: none;
+
+    span {
       color: $color-cerulean-blue;
-      width: 48px;
-
-      @include vp-767 {
-        width: 37px;
-      }
+      opacity: 0.7;
     }
 
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      background-color: $color-default-white;
-
-      span {
-        color: $color-cerulean-blue;
-      }
-
-      svg {
-        background-color: $color-cerulean-blue;
-        color: $color-default-white;
-      }
-    }
-
-    &:active {
-      background-color: $color-default-white;
-      outline: none;
-
-      span {
-        color: $color-cerulean-blue;
-        opacity: 0.7;
-      }
-
-      svg {
-        background-color: $color-cerulean-blue;
-        color: $color-white-70;
-      }
+    svg {
+      background-color: $color-cerulean-blue;
+      color: $color-white-70;
     }
   }
 }

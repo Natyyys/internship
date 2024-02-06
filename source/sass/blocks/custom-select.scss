@@ -46,170 +46,170 @@
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
   }
+}
 
-  &__label {
-    font-size: 14px;
-    line-height: 14px;
-    color: $color-alabaster;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    margin-bottom: 2px;
+.custom-select__label {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-alabaster;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  margin-bottom: 2px;
 
-    @include vp-1439 {
-      margin-bottom: 0;
-    }
-
-    @include vp-767 {
-      font-size: 12px;
-      line-height: 14px;
-    }
+  @include vp-1439 {
+    margin-bottom: 0;
   }
 
-  &__button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 50px;
-    padding: 14px 20px 15px;
-    font-size: 14px;
+  @include vp-767 {
+    font-size: 12px;
     line-height: 14px;
+  }
+}
+
+.custom-select__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 20px 15px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-default-white;
+  background-color: transparent;
+  border: 1px solid $color-white-30;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.custom-select__text {
+  flex-shrink: 0;
+  width: 80%;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.custom-select__icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 7px;
+  margin: 2px 0 0 auto;
+  background-color: $color-default-white;
+  transition: transform $trans-default;
+  clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+}
+
+.custom-select__list {
+  position: absolute;
+  bottom: -4px;
+  z-index: 1;
+  width: 100%;
+  max-height: 194px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  color: $color-charcoal;
+  background-color: $color-default-white;
+  border: 1px solid $color-default-white;
+  border-radius: 8px;
+  transform: translateY(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility $trans-default,
+    opacity $trans-default;
+}
+
+.custom-select__item {
+  padding: 17px 20px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: start;
+  outline: none;
+  cursor: pointer;
+  transition:
+    background-color $trans-default,
+    color $trans-default;
+
+  &[aria-selected="true"] {
     color: $color-default-white;
-    background-color: transparent;
-    border: 1px solid $color-white-30;
-    border-radius: 8px;
-    outline: none;
-    cursor: pointer;
-    transition: border 0.3s ease;
+    background-color: $color-cerulean-blue;
   }
 
-  &__text {
-    flex-shrink: 0;
-    width: 80%;
-    overflow: hidden;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: left;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    opacity: 0;
-    transition: opacity 0.3s ease 0.1s;
-  }
-
-  &__icon {
-    flex-shrink: 0;
-    width: 14px;
-    height: 7px;
-    margin: 2px 0 0 auto;
-    background-color: $color-default-white;
-    transition: transform $trans-default;
-    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
-  }
-
-  &__list {
-    position: absolute;
-    bottom: -4px;
-    z-index: 1;
-    width: 100%;
-    max-height: 194px;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    list-style: none;
-    color: $color-charcoal;
-    background-color: $color-default-white;
-    border: 1px solid $color-default-white;
-    border-radius: 8px;
-    transform: translateY(100%);
-    visibility: hidden;
-    opacity: 0;
-    transition:
-      visibility $trans-default,
-      opacity $trans-default;
-  }
-
-  &__item {
-    padding: 17px 20px;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: start;
-    outline: none;
-    cursor: pointer;
-    transition:
-      background-color $trans-default,
-      color $trans-default;
-
-    &[aria-selected="true"] {
-      color: $color-default-white;
-      background-color: $color-cerulean-blue;
-    }
-
-    &:hover {
-      &:not([aria-selected="true"]) {
-        color: $color-cerulean-blue;
-        background-color: $color-default-white;
-      }
-    }
-
-    &:focus,
-    &:focus-visible,
-    &:active {
-      color: $color-default-white;
-      background-color: $color-cerulean-blue;
+  &:hover {
+    &:not([aria-selected="true"]) {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
     }
   }
 
-  &--light {
-    gap: 8px 0;
+  &:focus,
+  &:focus-visible,
+  &:active {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+}
 
-    &:hover,
-    &:focus,
-    &:focus-within {
-      .custom-select__label {
-        opacity: 1;
-      }
+.custom-select--light {
+  gap: 8px 0;
 
-      .custom-select__button {
-        border: 1px solid $color-charcoal;
-      }
-    }
-
-    &:has(.custom-select__button:disabled) {
-      .custom-select__label {
-        opacity: 0.8;
-      }
-
-      .custom-select__button {
-        border: 1px solid $color-charcoal-30;
-      }
-    }
-
+  &:hover,
+  &:focus,
+  &:focus-within {
     .custom-select__label {
-      color: $color-charcoal;
-      margin-top: 2px;
-      margin-bottom: 2;
-
-      @include vp-767 {
-        font-size: 14px;
-        margin-top: 0;
-      }
+      opacity: 1;
     }
 
     .custom-select__button {
-      color: $color-charcoal;
-      border: 1px solid $color-charcoal-30;
-
-      @include vp-767 {
-        min-height: 44px;
-      }
-    }
-
-    .custom-select__icon {
-      background-color: $color-charcoal;
-    }
-
-    .custom-select__list {
       border: 1px solid $color-charcoal;
     }
+  }
+
+  &:has(.custom-select__button:disabled) {
+    .custom-select__label {
+      opacity: 0.8;
+    }
+
+    .custom-select__button {
+      border: 1px solid $color-charcoal-30;
+    }
+  }
+
+  .custom-select__label {
+    color: $color-charcoal;
+    margin-top: 2px;
+    margin-bottom: 2;
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-top: 0;
+    }
+  }
+
+  .custom-select__button {
+    color: $color-charcoal;
+    border: 1px solid $color-charcoal-30;
+
+    @include vp-767 {
+      min-height: 44px;
+    }
+  }
+
+  .custom-select__icon {
+    background-color: $color-charcoal;
+  }
+
+  .custom-select__list {
+    border: 1px solid $color-charcoal;
   }
 }
 

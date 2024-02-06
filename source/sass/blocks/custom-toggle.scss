@@ -74,13 +74,18 @@
   }
 }
 
-.custom-toggle input {
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    + span {
-      border: 1px solid $color-default-white;
-    }
+.custom-toggle input:hover,
+.custom-toggle input:focus,
+.custom-toggle input:focus-visible {
+  + span {
+    border: 1px solid $color-default-white;
+  }
+}
+
+.custom-toggle input:disabled {
+  + span {
+    border: 1px solid $color-default-white;
+    background: $color-white-60;
   }
 }
 
@@ -92,18 +97,7 @@
       border: 1px solid $color-charcoal;
     }
   }
-}
 
-.custom-toggle input {
-  &:disabled {
-    + span {
-      border: 1px solid $color-default-white;
-      background: $color-white-60;
-    }
-  }
-}
-
-.custom-toggle--light input {
   &:disabled {
     + span {
       border: 1px solid $color-charcoal;
@@ -122,21 +116,7 @@
     color: $color-cerulean-blue;
     display: block;
   }
-}
 
-.custom-toggle--light input:checked {
-  + span {
-    border: 1px solid $color-cerulean-blue;
-    background: transparent;
-  }
-
-  ~ svg {
-    color: $color-cerulean-blue;
-    display: block;
-  }
-}
-
-.custom-toggle input:checked {
   &:hover,
   &:focus {
     + span {
@@ -149,14 +129,11 @@
       display: block;
     }
   }
-}
 
-.custom-toggle--light input:checked {
-  &:hover,
-  &:focus {
+  &:disabled {
     + span {
-      border: 1px solid $color-cerulean-blue;
-      background: $color-cerulean-blue;
+      border: 1px solid $color-mischka;
+      background: $color-mischka;
     }
 
     ~ svg {
@@ -166,11 +143,22 @@
   }
 }
 
-.custom-toggle input:checked {
-  &:disabled {
+.custom-toggle--light input:checked {
+  + span {
+    border: 1px solid $color-cerulean-blue;
+    background: transparent;
+  }
+
+  ~ svg {
+    color: $color-cerulean-blue;
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
     + span {
-      border: 1px solid $color-mischka;
-      background: $color-mischka;
+      border: 1px solid $color-cerulean-blue;
+      background: $color-cerulean-blue;
     }
 
     ~ svg {

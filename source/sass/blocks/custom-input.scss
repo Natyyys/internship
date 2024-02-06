@@ -68,20 +68,6 @@
     }
   }
 
-  &:has(input:disabled, textarea:disabled) {
-    label {
-      opacity: 0.6;
-    }
-
-    input,
-    textarea {
-      border: 1px solid $color-white-40;
-      background: $color-white-20;
-      pointer-events: none;
-      cursor: default;
-    }
-  }
-
   textarea {
     height: 98px;
     resize: none;
@@ -96,13 +82,29 @@
       margin-bottom: 0;
     }
   }
+}
 
-  &.is-invalid {
-    input,
-    textarea {
-      background: $color-wild-watermelon-20;
-      border: 1px solid $color-wild-watermelon;
-    }
+.custom-input:has(input:disabled, textarea:disabled),
+.custom-textarea:has(input:disabled, textarea:disabled) {
+  label {
+    opacity: 0.6;
+  }
+
+  input,
+  textarea {
+    border: 1px solid $color-white-40;
+    background: $color-white-20;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.custom-input.is-invalid,
+.custom-textarea.is-invalid {
+  input,
+  textarea {
+    background: $color-wild-watermelon-20;
+    border: 1px solid $color-wild-watermelon;
   }
 }
 
@@ -157,17 +159,17 @@
       outline: none;
     }
   }
+}
 
-  &:has(input:disabled, textarea:disabled) {
-    label {
-      color: $color-mischka;
-      opacity: 0.6;
-    }
+.custom-input--light:has(input:disabled, textarea:disabled) {
+  label {
+    color: $color-mischka;
+    opacity: 0.6;
+  }
 
-    input,
-    textarea {
-      border: 1px solid $color-mischka-50;
-      background: $color-mischka-20;
-    }
+  input,
+  textarea {
+    border: 1px solid $color-mischka-50;
+    background: $color-mischka-20;
   }
 }

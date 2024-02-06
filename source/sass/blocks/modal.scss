@@ -21,91 +21,6 @@
     display: none;
   }
 
-  &__wrapper {
-    transform: translateZ(0);
-    background-color: $color-black-pearl-40;
-    position: relative;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 90px 80px 99px;
-
-    @include vp-1439 {
-      padding-top: 204px;
-    }
-
-    @include vp-767 {
-      padding: 23px 15px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    cursor: pointer;
-  }
-
-  &__content {
-    position: relative;
-    width: 510px;
-    height: fit-content;
-    padding: 53px 80px 60px;
-    background-color: $color-default-white;
-    border-radius: 16px;
-    margin-bottom: auto;
-
-    @include vp-767 {
-      width: 100%;
-      max-width: 510px;
-      padding: 35px 15px 40px;
-    }
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 16px;
-    background: $color-default-white;
-    border: none;
-    cursor: pointer;
-
-    @include vp-767 {
-      padding: 21px;
-      top: 0;
-      right: 0;
-      border-radius: 16px;
-    }
-
-    svg {
-      display: block;
-      color: $color-cerulean-blue;
-
-      @include vp-767 {
-        width: 14px;
-        height: 14px;
-      }
-    }
-  }
-
-  &--preload {
-    transition: none;
-  }
-
-  &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-    pointer-events: auto;
-  }
-
   iframe {
     max-width: 100%;
     border: none;
@@ -133,27 +48,6 @@
     }
   }
 
-  p {
-    margin: 0;
-
-    br {
-      display: none;
-    }
-
-    @include vp-1439 {
-      line-height: 20px;
-    }
-
-    @include vp-767 {
-      font-size: 14px;
-      padding: 0 18px 0 15px;
-
-      br {
-        display: block;
-      }
-    }
-  }
-
   p + p {
     margin-top: 10px;
   }
@@ -172,6 +66,112 @@
     @include vp-767 {
       margin-top: 20px;
       gap: 15px 0;
+    }
+  }
+}
+
+.modal__wrapper {
+  transform: translateZ(0);
+  background-color: $color-black-pearl-40;
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 90px 80px 99px;
+
+  @include vp-1439 {
+    padding-top: 204px;
+  }
+
+  @include vp-767 {
+    padding: 23px 15px;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  width: 510px;
+  height: fit-content;
+  padding: 53px 80px 60px;
+  background-color: $color-default-white;
+  border-radius: 16px;
+  margin-bottom: auto;
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 510px;
+    padding: 35px 15px 40px;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 16px;
+  background: $color-default-white;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    padding: 21px;
+    top: 0;
+    right: 0;
+    border-radius: 16px;
+  }
+
+  svg {
+    display: block;
+    color: $color-cerulean-blue;
+
+    @include vp-767 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.modal--preload {
+  transition: none;
+}
+
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  pointer-events: auto;
+}
+
+.modal p {
+  margin: 0;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    padding: 0 18px 0 15px;
+
+    br {
+      display: block;
     }
   }
 }
