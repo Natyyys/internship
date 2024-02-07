@@ -33,24 +33,6 @@
       letter-spacing: 0.24px;
     }
   }
-
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    background-color: $color-cerulean-blue;
-    outline: none;
-
-    span {
-      color: $color-default-white;
-    }
-
-    svg {
-      background-color: $color-default-white;
-      color: $color-cerulean-blue;
-      transform: rotate(45deg);
-      transition: transform $trans-default;
-    }
-  }
 }
 
 .button__icon {
@@ -85,6 +67,10 @@
 .button:focus-visible {
   background-color: $color-cerulean-blue;
   outline: none;
+
+  span {
+    color: $color-default-white;
+  }
 
   .button__icon {
     background-color: $color-default-white;
@@ -182,6 +168,7 @@
 
   .button__icon {
     background-color: $color-default-white;
+    width: unset;
 
     @include vp-767 {
       width: 37px;
@@ -189,7 +176,7 @@
   }
 
   svg {
-    color: $color-cerulean-blue;;
+    color: $color-cerulean-blue;
   }
 
   &:hover,
