@@ -171,7 +171,7 @@
 
 .news__text-date {
   position: relative;
-  width: fit-content;
+  width: min-content;
   display: flex;
   align-items: flex-end;
 
@@ -189,7 +189,6 @@
     display: block;
     border-radius: 0 12px 0 0;
     padding: 11px 12px 4px 0;
-    width: max-content;
   }
 }
 
@@ -236,6 +235,7 @@
   grid-template-columns: repeat(2, auto);
   background: $color-alabaster;
   width: 240px;
+  justify-content: space-between;
   padding: 9px 18px 12px 0;
   gap: 16px;
   border-radius: 0 12px 12px 0;
