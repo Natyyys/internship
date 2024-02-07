@@ -8,7 +8,9 @@ const initHeroSlider = () => {
     autoHeight: true,
     speed: 1500,
     effect: 'fade',
-    // autoplay: true,
+    autoplay: {
+      delay: 3000,
+    },
     breakpoints: {
       1440: {
         allowTouchMove: false,

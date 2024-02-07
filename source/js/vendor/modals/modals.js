@@ -151,7 +151,6 @@ export class Modals {
 
     this._setSettings(modalName);
     modal.classList.add('is-active');
-    // window.scrollTo(0, 0);
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();

@@ -40,7 +40,7 @@ function setNewsSlider() {
     pagination: {
       el: pagination,
       clickable: true,
-      renderBullet: (index, className) => `<button class="news__pagination-button ${className} type="button" aria-label="Перейти к ${index + 1} слайду">${index + 1}</button>`,
+      renderBullet: (index, className) => `<button class="news__pagination-button ${className}" type="button" aria-label="Перейти к ${index + 1} слайду">${index + 1}</button>`,
     },
     navigation: {
       nextEl: buttonNext,
