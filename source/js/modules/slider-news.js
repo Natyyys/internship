@@ -9,7 +9,7 @@ let swiper;
 
 function setNewsSlider() {
   swiper = new Swiper(newsSlider, {
-    speed: 500,
+    speed: 1000,
     observer: true,
     loop: false,
     slidesPerView: 'auto',

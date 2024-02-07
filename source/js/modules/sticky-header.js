@@ -16,9 +16,7 @@ function onScrollHeader() {
       header.classList.add(HIDDEN_CLASS);
     }
     if (currentScroll < prevScroll && headerHidden()) {
-      // setTimeout(() => {
       header.classList.remove(HIDDEN_CLASS);
-      // }, 300);
     }
 
     prevScroll = currentScroll;

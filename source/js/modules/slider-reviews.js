@@ -7,7 +7,7 @@ const scrollbar = document.querySelector('[data-reviews-scrollbar]');
 
 const initReviewsSlider = () => {
   const swiper = new Swiper(reviewsSlider, {
-    speed: 1500,
+    speed: 1000,
     loop: false,
     navigation: {
       nextEl: buttonNext,
@@ -18,10 +18,13 @@ const initReviewsSlider = () => {
     },
 
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-        allowTouchMove: true,
+      1440: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        allowTouchMove: false,
+        scrollbar: {
+          dragSize: '392',
+        },
       },
       768: {
         slidesPerView: 'auto',
@@ -31,13 +34,10 @@ const initReviewsSlider = () => {
           dragSize: '324',
         },
       },
-      1440: {
-        slidesPerView: 2,
-        spaceBetween: 32,
-        allowTouchMove: false,
-        scrollbar: {
-          dragSize: '392',
-        },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        allowTouchMove: true,
       },
     },
   });

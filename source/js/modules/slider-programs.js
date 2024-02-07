@@ -7,7 +7,7 @@ const scrollbar = document.querySelector('[data-programs-scrollbar]');
 
 const initProgramsSlider = () => {
   const swiper = new Swiper(programsSlider, {
-    speed: 1500,
+    speed: 1000,
     loop: false,
     navigation: {
       nextEl: buttonNext,
